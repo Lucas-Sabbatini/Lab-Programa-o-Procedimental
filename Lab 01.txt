@@ -330,4 +330,108 @@ int main()
     return 0;
 }
 
-Exercício 24
+Exercício 24-------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float m2,acres;
+    printf("Digite o valor da area em metros quadrados: ");
+    scanf("%f",&m2);
+    acres = m2*0.000247;
+    printf("O valor da area em acres eh: %f",acres);
+    return 0;
+}
+
+Exercício 25------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float A,M;
+    printf("Digite o valor da area em acres:");
+    scanf("%f",&A);
+    M = A*4048.58;
+    printf("O valor da area em metros quadrados eh: %f",M);
+    return 0;
+}
+
+Exercício 26-------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float H,M;
+    printf("Digite o valor da area em metros quadrados:");
+    scanf("%f",&M);
+    H = M*0.0001;
+    printf("O valor da area em hectares eh: %f",H);
+    return 0;
+
+}
+
+Exercício 27-----
+
+#include <stdio.h>
+
+
+int main()
+{
+    float H,M;
+    printf("Digite o valor da area em hectares:");
+    scanf("%f",&H);
+    M = H*10000;
+    printf("O valor da area em metros quadrados eh: %f",M);
+    return 0;
+
+}
+
+Exercício 28-------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float v1,v2,v3;
+    printf("Digite tres valores:");
+    scanf("%f %f %f",&v1,&v2,&v3);
+    printf("O valor da soma dos quadrados dos numeros eh: %f",((v1*v1) + (v2*v2) + (v3*v3)));
+    return 0;
+}
+
+Exercício 29------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float med,n1,n2,n3,n4;
+    printf("Digite quatro notas:");
+    scanf("%f %f %f %f",&n1,&n2,&n3,&n4);
+    med = (n1+n2+n3+n4)/4;
+    printf("O valor da media entre as notas eh: %f",med);
+    return 0;
+}
+
+Exercício 30--------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float real,cot,dol;
+    printf("Digite um valor em real e a cotacao do dolar:");
+    scanf("%f %f",&real, &cot);
+    dol = real/cot;
+    printf("A quantia equivalente em dolares eh: %f",dol);
+    return 0;
+}
