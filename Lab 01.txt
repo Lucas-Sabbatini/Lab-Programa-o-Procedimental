@@ -1,0 +1,272 @@
+Exercício 1-----
+
+#include <stdio.h>
+
+int main()
+{
+   int x;
+   printf("Coloque o numero aqui: ");
+   scanf("%d",&x);
+   printf("Seu numero eh esse: %d",x);
+   return 0;
+}
+
+Exercício 2------
+
+#include <stdio.h>
+
+int main()
+{
+   float x;
+   printf("Coloque o numero aqui: ");
+   scanf("%f",&x);
+   printf("Seu numero eh esse: %f",x);
+   return 0;
+}
+
+Exercício 3-----
+
+#include <stdio.h>
+
+int main()
+{
+   int soma, n1,n2,n3;
+   printf("Coloque 3 numeros inteiros: ");
+   scanf("%d %d %d",&n1,&n2,&n3);
+   soma = n1 + n2 + n3;
+   printf("A soma entre os 3 numeros eh: %d",soma);
+   return 0;
+}
+
+Exercício 4-----
+
+#include <stdio.h>
+
+int main()
+{
+   float x;
+   printf("Digite um numero real: ");
+   scanf("%f",&x);
+   x = x*x;
+   printf("O quadrado desse numero eh: %f",x);
+   return 0;
+}
+
+Exercício 5-----
+
+#include <stdio.h>
+
+int main()
+{
+   float x;
+   printf("Digite um numero real: ");
+   scanf("%f",&x);
+   x = x/5;
+   printf("A quinta parte desse numero eh: %f",x);
+   return 0;
+}
+
+Exercício 6-----
+
+#include <stdio.h>
+
+int main()
+{
+   float C,F;
+   printf("Digite a temperatura em graus Celsius: ");
+   scanf("%f",&C);
+   F = C*(9.0/5.0)+32.0;
+   printf("A temperatura em Fahrenheit: %f",F);
+   return 0;
+}
+
+Exercício 7-----
+
+#include <stdio.h>
+
+int main()
+{
+   float C,F;
+   printf("Digite a temperatura em Fahrenheit: ");
+   scanf("%f",&F);
+   C = 5.0*(F - 32)/9.0;
+   printf("A temperatura em graus Celsius: %f",C);
+   return 0;
+}
+Exercício 8-----
+
+#include <stdio.h>
+
+int main()
+{
+   float C,K;
+   printf("Digite a temperatura em graus Kelvin: ");
+   scanf("%f",&K);
+   C=K-273.15;
+   printf("A temperatura em graus Celsius eh: %f",C);
+   return 0;
+
+}
+
+Exercício 9-----
+
+#include <stdio.h>
+
+int main()
+{
+   float C,K;
+   printf("Digite a temperatura em graus Celsius: ");
+   scanf("%f",&C);
+   K=C+273.15;
+   printf("A temperatura em graus Kelvin eh: %f",K);
+   return 0;
+
+}
+
+Exercício 10-----
+
+#include <stdio.h>
+
+int main()
+{
+   float M,K;
+   printf("Digite a velocidade em km/h: ");
+   scanf("%f",&K);
+   M=K/3.6;
+   printf("A velocidade em m/s eh: %f",M);
+   return 0;
+
+}
+
+Exercpicio 11-----
+
+#include <stdio.h>
+
+int main()
+{
+   float M,K;
+   printf("Digite a velocidade em m/s: ");
+   scanf("%f",&M);
+   K=M*3.6;
+   printf("A velocidade em km/h eh: %f",K);
+   return 0;
+
+}
+
+Exercício 12-----
+
+#include <stdio.h>
+
+int main()
+{
+   float M,K;
+   printf("Digite uma distancia em milhas: ");
+   scanf("%f",&M);
+   K=1.61*M;
+   printf("A distancia em quilometros eh: %f",K);
+   return 0;
+
+}
+
+Exercício 13-----
+
+#include <stdio.h>
+
+int main()
+{
+   float M,K;
+   printf("Digite uma distancia em quilometros: ");
+   scanf("%f",&K);
+   M=K/1.61;
+   printf("A distancia em milhas eh: %f",M);
+   return 0;
+
+}
+
+
+Exercício 14-----
+
+#include <stdio.h>
+#define PI 3.141592
+int main()
+{
+   float R,G,pi;
+   printf("Digite um angulo em graus: ");
+   scanf("%f",&G);
+   R=G*PI/180;
+   printf("O angulo em radianos eh: %f",R);
+   return 0;
+}
+
+
+Exercício 15-----
+
+#include <stdio.h>
+#define PI 3.141592
+int main()
+{
+   float R,G,pi;
+   printf("Digite um angulo em radianos: ");
+   scanf("%f",&R);
+   G=R*180/PI;
+   printf("O angulo em graus eh: %f",G);
+   return 0;
+}
+
+Exercício 16-----
+
+#include <stdio.h>
+
+int main()
+{
+   float C,P;
+   printf("Digite um comprimento em polegadas: ");
+   scanf("%f",&P);
+   C=P*2.54;
+   printf("O comprimento em centimetros eh: %f",C);
+   return 0;
+}
+
+Exercício 17-----
+
+#include <stdio.h>
+
+int main()
+{
+   float C,P;
+   printf("Digite um comprimento em centimetros: ");
+   scanf("%f",&C);
+   P=C/2.54;
+   printf("O comprimento em polegadas eh: %f",P);
+   return 0;
+}
+
+
+Exercício 18-----
+
+#include <stdio.h>
+
+int main()
+{
+   float M,L;
+   printf("Digite o volume em metros cubicos: ");
+   scanf("%f",&M);
+   L=M*1000;
+   printf("O volume em litros eh: %f",L);
+   return 0;
+}
+
+Exercício 19-----
+
+#include <stdio.h>
+
+int main()
+{
+   float M,L;
+   printf("Digite o volume em litros: ");
+   scanf("%f",&L);
+   M=L/1000;
+   printf("O volume em metros cubicos eh: %f",M);
+   return 0;
+}
+
