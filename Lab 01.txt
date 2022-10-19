@@ -610,6 +610,18 @@ int main()
 }
 Exercício 42------
 
+#include <stdio.h>
+
+
+int main()
+{
+    float salario;
+    printf("Digite o salario de um funcionario: ");
+    scanf("%f",&salario);
+    salario = salario +(salario*0.05) - (salario*0.07);
+    printf("O valor a receber eh: %f",salario);
+    return 0;
+}
 
 Exercício 43------
 
@@ -643,5 +655,159 @@ int main()
     if((n-altT/altD)!= 0){
         printf("Porem nao sera possivel alcancar o fim pois nao se pode subir meio degrau");
     }
+    return 0;
+}
+
+Exercício 45--------
+
+#include <stdio.h>
+
+
+int main()
+{
+    char a;
+    printf("Digite uma letra maiuscula: ");
+    scanf("%c",&a);
+    printf("%c",a+32);
+    return 0;
+}
+
+Exercício 46-------
+
+#include <stdio.h>
+
+
+int main()
+{
+    int d,c,u,n;
+    printf("Digite um inteiro positivo de 100 a 999 ");
+    scanf("%d",&n);
+    c = n/100;
+    d = (n%100) /10;
+    u = ((n%100)%10);
+    printf("O numero formado pelos digitos invertidos eh: %d%d%d",u,d,c);
+    return 0;
+}
+
+Exercício 47--------
+
+#include <stdio.h>
+
+
+int main()
+{
+    int d,c,u,m,n;
+    printf("Digite um inteiro positivo de 100 a 999 ");
+    scanf("%d",&n);
+    m = n/1000;
+    c = (n%1000)/100;
+    d = ((n%1000)%100) /10;
+    u = (((n%1000)%100)%10);
+    printf("%d\n%d\n%d\n%d",m,c,d,u);
+    return 0;
+}
+
+Exercício 48----
+
+#include <stdio.h>
+
+
+int main()
+{
+    int val,hr,min,sec;
+    printf("Digite um valor inteiro em segundos: ");
+    scanf("%d",&val);
+    hr = val/3600;
+    min = (val%3600)/60;
+    sec = ((val%3600)%60);
+    printf("%d horas\n%d minutos\n%d segundos",hr,min,sec);
+    return 0;
+}
+
+Exercício 49-------
+
+#include <stdio.h>
+
+
+int main()
+{
+    int val,hr,min,sec;
+    scanf("%d %d %d %d",&hr,&min,&sec,&val);
+    hr = hr+(val/3600);
+    min = min +((val%3600)/60);
+    sec = sec +((val%3600)%60);
+
+    min = min +(sec/60);
+    hr = hr +(min/60);
+
+    hr%=24;
+    min%=60;
+    sec%=60;
+    printf("%d horas\n%d minutos\n%d segundos",hr,min,sec);
+    return 0;
+}
+
+Exercício 50-------
+
+#include <stdio.h>
+
+
+int main()
+{
+    int anonas,anoa,idade;
+    printf("Digite a idade de uma pessoa e o ano atual respectivamente: ");
+    scanf("%d %d",&idade,&anoa);
+    anonas = anoa -idade;
+    printf("O ano de nascimento eh: %d",anonas);
+    return 0;
+}
+
+Exercício 51-------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y,dist;
+    printf("Digite as coordenadas x e y: ");
+    scanf("%f %f",&x,&y);
+    dist = sqrt((x*x)+(y*y));
+    printf("A distancia eh: %f",dist);
+    return 0;
+}
+
+Exercício 52-------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y,z,prem,t;
+    printf("Digite  a quantia que cada um investiu respectivamente e o premio: ");
+    scanf("%f %f %f %f",&x,&y,&z,&prem);
+    t = (prem/(x+y+z));
+    x= x*t;
+    y= y*t;
+    z= z*t;
+    printf("O valor que cada um recebeu respectivamente foi: %f %f %f",x,y,z);
+
+    return 0;
+}
+
+Exercício 53--------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y,t;
+    printf("Digite  o valor dos lados do terreno e o preco do metro: ");
+    scanf("%f %f %f",&x,&y,&t);
+    t = (x*2 + y*2)*t;
+    printf("O preco total eh: %f",t);
+
     return 0;
 }
