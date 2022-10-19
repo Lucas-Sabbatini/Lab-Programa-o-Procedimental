@@ -592,3 +592,56 @@ int main()
     printf("O total a ser pago eh: %f",total);
     return 0;
 }
+
+Exercício 41----
+
+#include <stdio.h>
+
+int main()
+{
+    float valor;
+    float horas;
+    printf("Digete o valor da hora de trabalho e o numero de horas trabalhadas no mes respectivamente: ");
+    scanf("%f %f",&valor, &horas);
+    valor = valor * horas;
+    valor = 1.1*valor;
+    printf("O valor a ser recebido eh: %f",valor);
+    return 0;
+}
+Exercício 42------
+
+
+Exercício 43------
+
+#include <stdio.h>
+
+int main()
+{
+    float val1,valdec,valpar,valcomv,valcomp;
+    printf("Digite um valor total: ");
+    scanf("%f",&val1);
+    valdec= val1*0.9;
+    valpar= val1/3;
+    valcomv = valdec*0.05;
+    valcomp = val1* 0.05;
+    printf("O valor com o desconto de 10porcento eh: %f\n O valor de cada parcela eh: %f\n O valor da comissao a vista eh: %f\n O valor da comissao parcelada eh: %f\n", valdec,valpar,valcomv,valcomp);
+    return 0;
+}
+
+Exercício 44-------
+
+#include <stdio.h>
+
+int main()
+{
+    float altD,altT;
+    int n;
+    printf("Digite o valor da altura do degrau e depois a altura desejada: ");
+    scanf("%f %f",&altD,&altT);
+    n = (int) altT/altD;
+    printf("O numero de degraus subidos eh: %d\n",n);
+    if((n-altT/altD)!= 0){
+        printf("Porem nao sera possivel alcancar o fim pois nao se pode subir meio degrau");
+    }
+    return 0;
+}
