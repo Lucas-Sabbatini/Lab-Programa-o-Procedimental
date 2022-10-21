@@ -180,3 +180,28 @@ int main()
     }
     return 0;
 }
+
+
+Exercício 10----------------------
+
+
+#include <stdio.h>
+
+
+int main()
+{
+    float h;
+    char sexo;
+    printf("Digite a altura de uma pessoa e o sexo (h para homens e m para mulheres): ");
+    scanf("%f %c",&h,&sexo);
+    if (sexo == 'h'){
+        printf("O seu peso ideal eh: %f", (72.7*h)-58);
+    }
+    else{
+        printf("O seu peso ideal eh: %f", (62.1*h)-44.7);
+    }
+    return 0;
+}
+
+Exercicio 11----------------------------
+
