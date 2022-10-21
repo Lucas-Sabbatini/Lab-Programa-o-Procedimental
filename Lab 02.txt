@@ -1,1 +1,105 @@
+Exercício 1----------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y;
+    printf("Digite dois numeros: ");
+    scanf("%f %f",&x,&y);
+    if (x>y){
+        printf("O maior numero eh: %f",x);
+    }
+    else if (x==y){
+        printf("Os dois numeros sao iguais");
+    }
+    else{
+        printf("O maior numero eh: %f",y);
+    }
+    return 0;
+}
+
+Exercício 2--------------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x;
+    printf("Digite um numero: ");
+    scanf("%f",&x);
+    if (x>=0){
+        x = sqrt(x);
+        printf("A raiz quadrada do numero eh: %f",x);
+    }
+    else{
+        printf("Nao eh possivel calcular a raiz de um numero negativo");
+    }
+    return 0;
+}
+
+Exercício 3---------------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x;
+    printf("Digite um numero: ");
+    scanf("%f",&x);
+    if (x>=0){
+        x = sqrt(x);
+        printf("A raiz quadrada do numero eh: %f",x);
+    }
+    else{
+        x = x*x;
+        printf("O numero digitado ao quadrado eh: %f",x);
+    }
+    return 0;
+}
+
+Exercício 4--------------------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x;
+    printf("Digite um numero: ");
+    scanf("%f",&x);
+    if (x>=0){
+        printf("O numero digitado ao quadrado eh: %f\n",(x*x));
+        printf("A raiz quadrada do numero digitado eh: %f", sqrt(x));
+    }
+    else{
+        printf("O numero digitado eh negativo");
+    }
+    return 0;
+}
+
+Exercício 5------------------------
+
+#include <stdio.h>
+
+
+int main()
+{
+    int x;
+    printf("Digite um numero: ");
+    scanf("%d",&x);
+    if ((x%2)==0){
+        printf("O numero digitado eh par");
+    }
+    else{
+        printf("O numero digitado eh impar");
+    }
+    return 0;
+}
+
+Exercício 6-------------------------
+
 
