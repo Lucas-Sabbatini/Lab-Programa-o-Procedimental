@@ -205,3 +205,98 @@ int main()
 
 Exercicio 11----------------------------
 
+#include <stdio.h>
+
+
+int main()
+{
+    int x,c,d,u;
+    printf("Digite um numero de 0 ate 999: ");
+    scanf("%d",&x);
+    if(x>=0){
+        c = x/100;
+        d = (x%100)/10;
+        u = (x%100)%10;
+        printf("A soma dos algarismos do numero digitado eh: %d",c+d+u);
+    }
+    else{
+        printf("Numero invalido");
+    }
+    return 0;
+}
+
+Exercício 12-----------
+
+#include <stdio.h>
+
+
+int main()
+{
+    int x;
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d",&x);
+    if(x>=0){
+        printf("O logaritimo desse numero eh: %f",log10(x));
+    }
+    else{
+        printf("O numero digitado eh invalido");
+    }
+    return 0;
+}
+
+
+Exercício 13-------------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y,z,nota;
+    printf("Digite 3 notas: ");
+    scanf("%f %f %f",&x,&y,&z);
+    if(x>=0 && y>=0 && z>=0){
+        nota = (x+y+(2*z))/4;
+        if(nota>=60){
+            printf("Parabens, voce passou");
+        }
+        else{
+            printf("Mais sorte da proxima vez :(");
+        }
+    }
+    else{
+        printf("Notas invalidas");
+    }
+    return 0;
+}
+
+Exercício 14-----------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y,z,nota;
+    printf("Digite 3 notas: ");
+    scanf("%f %f %f",&x,&y,&z);
+    if(x>=0 && y>=0 && z>=0 && x<=10&& y<=10 && z<=10){
+        nota = (x*2+y*3+5*z)/10;
+        if(nota<3){
+            printf("O aluno reprovou");
+        }
+        else if(nota<5){
+            printf("O aluno ficou de recuperacao");
+        }
+        else{
+            printf("O aluno passou");
+        }
+    }
+    else{
+        printf("Notas invalidas");
+    }
+    return 0;
+}
+
+Exercício 15-------------
+
