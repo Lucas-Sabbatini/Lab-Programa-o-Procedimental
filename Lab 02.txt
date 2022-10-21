@@ -102,4 +102,81 @@ int main()
 
 Exercício 6-------------------------
 
+#include <stdio.h>
 
+
+int main()
+{
+    int x,y;
+    printf("Digite dois numeros inteiros: ");
+    scanf("%d %d",&x,&y);
+    if (x>y){
+        printf("%d eh maior que %d e a diferenca entre eles eh: %d",x,y,(x-y));
+    }
+    else{
+        printf("%d eh maior que %d e a diferenca entre eles eh: %d",y,x,(y-x));
+    }
+    return 0;
+}
+
+Exercício 7---------------------
+
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y;
+    printf("Digite dois numeros: ");
+    scanf("%f %f",&x,&y);
+    if (x>y){
+        printf("O maior numero eh: %f",x);
+    }
+    else if (x==y){
+        printf("Os dois numeros sao iguais");
+    }
+    else{
+        printf("O maior numero eh: %f",y);
+    }
+    return 0;
+}
+
+
+Exercício 8------------------------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y;
+    printf("Digite duas notas: ");
+    scanf("%f %f",&x,&y);
+    if ((x>=0) && (x<=10) && (y>=0) && (y<=10)){
+        printf("A media das notas eh: %f",(x+y)/2);
+    }
+    else{
+        printf("As notas digitadas nao sao validas");
+    }
+    return 0;
+}
+
+Exercício 9-------------------------
+
+#include <stdio.h>
+
+
+int main()
+{
+    float x,y;
+    printf("Digite o salario de um trabalhador e o valor da prestacao de um emprestimo: ");
+    scanf("%f %f",&x,&y);
+    if ((100*y/x)>20){
+        printf("Emprestimo nao concedido");
+    }
+    else{
+        printf("Emprestimo concedido1");
+    }
+    return 0;
+}
