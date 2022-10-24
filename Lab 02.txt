@@ -448,3 +448,69 @@ int main(){
     system("Pause");
     return 0;
 }
+
+
+Exercício 20-----------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    float x,y,z;
+    printf("Digite 3 possiveis lados de um triangulo: ");
+    scanf("%f %f %f",&x,&y,&z);
+    if((x<y+z)&&(y<x+z)&&(z<y+x)){
+       printf("Eh um triangulo ");
+       if((x==y&&x!=z)||(x==z&&z!=y)||(z==y&&y!=x)){
+        printf("Isoceles\n");
+       }
+       else if(x==y&&y==z){
+        printf("Equilatero\n");
+       }
+       else{
+        printf("Escaleno\n");
+       }
+    }
+    else{
+        printf("Nao eh um triangulo\n");
+    }
+    system("Pause");
+    return 0;
+}
+
+Exercício 21-----------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a;
+    float n1,n2;
+    printf("Escolha uma operação: \n(1) + soma de 2 numeros\n(2) - diferenca entre 2 numeros (maior pelo menor)\n(3) * produto entre 2 numeros\n(4) / divisao entre 2 numeros (o demonminador nao pode ser zero)\nDigite o numero correspondente a sua operacao: ");
+    scanf("%d",&a);
+    printf("\nAgora escolha dois numeros a serem operados: ");
+    scanf("%f %f",&n1,&n2);
+    if(a<=4){
+    switch (a){
+        case 1:
+        printf("Voce escolheu a adicao e o resultado eh: %f\n",n1+n2);
+        break;
+        case 2:
+        printf("Voce escolheu a subtracao e o resultado eh: %lf\n",abs(n1-n2));
+        break;
+        case 3:
+        printf("Voce escolheu a multiplicacao e o resultado eh: %f\n",n1*n2);
+        break;
+        case 4:
+        printf("Voce escolheu a divisao e o resultado eh: %f\n",n1/n2);
+        break;
+    }
+    }
+    else{
+        printf("Opcao invalida");
+    }
+    system("Pause");
+    return 0;
+}
+
+Exercício 22------------
