@@ -584,3 +584,94 @@ int main(){
     system("Pause");
     return 0;
 }
+
+
+Exercício 25---------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a,b,c,delta,x1,x2;
+    printf("Digite respectivamente os coeficientes a,b e c de uma equacao do segundo grau: ");
+    scanf("%f %f %f",&a,&b,&c);
+    if(a==0){
+        printf("Nao eh equacao do segundo grau");
+    }
+    else{
+        delta = (b*b) - (4*a*c);
+        if(delta<0){
+            printf("Nao existem raizes reais");
+        }
+        else if(delta == 0){
+            x1 = (-1*b)/2*a;
+            printf("A equacao so tem uma raiz real que eh: %f",x1);
+        }
+        else{
+            x1 = (-1*b+sqrt(delta))/2*a;
+            x2 = (-1*b-sqrt(delta))/2*a;
+            printf("As duas raizes sao: %f %f",x1,x2);
+        }
+
+    }
+
+    return 0;
+}
+
+Exercício 26-----------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float km,l;
+    printf("Digite uma distancia em km e a quantidade de litros usados: ");
+    scanf("%f %f",&km,&l);
+    km = km/l;
+    if(km>0&&km<8){
+        printf("Venda o carro");
+    }
+    else if(km>= 8&&km<=14){
+        printf("Economico");
+    }
+    else {
+        printf("Super economico");
+    }
+    return 0;
+}
+
+Exercício 27-------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int ida;
+    printf("Digite a idade de um nadador: ");
+    scanf("%d",&ida);
+    if(ida>=5&&ida<=7){
+        printf("Infantil A");
+    }
+    else if(ida>=8&&ida<=10){
+        printf("Infantil B");
+    }
+    else if(ida>=11&&ida<=13){
+        printf("Juvenil A");
+    }
+    else if(ida>=14&&ida<=17){
+        printf("Juvenil B");
+    }
+    else if(ida>=18){
+        printf("Senior");
+    }
+    else{
+        printf("Nenhuma das categorias");
+    }
+    return 0;
+}
+
+Exercício 28---------------
+
