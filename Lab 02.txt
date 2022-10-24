@@ -514,3 +514,73 @@ int main(){
 }
 
 Exercício 22------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int idade,servico;
+    printf("Digite a idade e o tempo de servico de um trabalhador: ");
+    scanf("%d %d",&idade,&servico);
+    if(idade>=65||servico>=30||(idade>=60&&servico>=25)){
+        printf("Pode se aposentar\n");
+    }
+    else{
+        printf("Ainda nao pode se aposentar\n");
+    }
+    system("Pause");
+    return 0;
+}
+
+
+Exercício 23-------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int ano;
+    printf("Digite um ano: ");
+    scanf("%d",&ano);
+    if(!(ano%4)&&ano%100){
+        printf("Esse ano eh bissexto\n");
+    }
+    else{
+        printf("Esse ano nao eh bissexto\n");
+    }
+    system("Pause");
+    return 0;
+}
+
+Exercício 24---------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    char est[2];
+    float valor;
+    printf("Digite o valor de um produto e o estado onde ele sera vendido (mg sp rj ms): ");
+    scanf("%f %s",&valor,&est);
+    if (est[0]!='M'&&est[0]!='S'&&est[0]!='R'){
+       est[0]-=32;
+       est[1]-=32;
+    }
+    if(est[1]=='G'&&est[0]=='M'){
+       printf("O valor total a pagar sera de: %f\n",valor*1.07);
+    }
+    else if(est[1]=='P'&&est[0]=='S'){
+       printf("O valor total a pagar sera de: %f\n",valor*1.12);
+    }
+    else if(est[1]=='J'&&est[0]=='R'){
+       printf("O valor total a pagar sera de: %f\n",valor*1.15);
+    }
+    else if(est[1]=='S'&&est[0]=='M'){
+       printf("O valor total a pagar sera de: %f\n",valor*1.08);
+    }
+    else{
+        printf("O estado digitado eh invalido\n");
+    }
+    system("Pause");
+    return 0;
+}
