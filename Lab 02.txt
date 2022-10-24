@@ -675,3 +675,32 @@ int main()
 
 Exercício 28---------------
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x,y,z;
+    char opt;
+    printf("Escolha uma media:\n(a) geometrica \n (b) ponderada \n (c) harmonica \n (d) aritimetica \n");
+    scanf("%c",&opt);
+    printf("Agora digite os 3 numeros a serem calculados a media: ");
+    scanf("%d %d %d",&x,&y,&z);
+    switch (opt){
+    case 'a':
+        printf("A media geometrica dos numeros eh: ");
+    break;
+    case 'b':
+        printf("A media ponderada dos numeros eh: ");
+    break;
+    case 'c':
+        printf("A media harmonica dos numeros eh: ");
+    break;
+    case 'd':
+        printf("A media aritimetica dos numeros eh: %f",);
+    break;
+    default:
+    break:
+    }
+    return 0;
+}
