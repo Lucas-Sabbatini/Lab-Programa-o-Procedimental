@@ -300,3 +300,35 @@ int main()
 
 Exercício 15-------------
 
+#include <stdio.h>
+
+int main(){
+    int x;
+    printf("Digite um numero inteiro de um a sete: ");
+    scanf("%d",&x);
+    switch(x){
+        case 1:
+         printf("Hoje eh domingo\n");
+        break;
+        case 2:
+         printf("Hoje eh segunda\n");
+        break;
+        case 3:
+         printf("Hoje eh terca\n");
+        break;
+        case 4:
+         printf("Hoje eh quarta\n");
+        break;
+        case 5:
+         printf("Hoje eh quinta\n");
+        break;
+        case 6:
+         printf("Hoje eh sexta\n");
+        break;
+        case 7:
+         printf("Hoje eh sabado\n");
+        break;
+    }
+    system("Pause");
+    return 0;
+}
