@@ -332,3 +332,119 @@ int main(){
     system("Pause");
     return 0;
 }
+
+
+Exercício 16------
+
+#include <stdio.h>
+
+int main(){
+    int x;
+    printf("Digite um numero inteiro de um a doze: ");
+    scanf("%d",&x);
+    switch(x){
+        case 1:
+         printf("Estamos em Janeiro\n");
+        break;
+        case 2:
+         printf("Estamos em Fevereiro\n");
+        break;
+        case 3:
+         printf("Estamos em Marco\n");
+        break;
+        case 4:
+         printf("Estamos em Abril\n");
+        break;
+        case 5:
+         printf("Estamos em Maio\n");
+        break;
+        case 6:
+         printf("Estamos em Junho\n");
+        break;
+        case 7:
+         printf("Estamos em Julho\n");
+        break;
+        case 8:
+         printf("Estamos em Agosto\n");
+        break;
+        case 9:
+         printf("Estamos em Setembro\n");
+        break;
+        case 10:
+         printf("Estamos em Outrubro\n");
+        break;
+        case 11:
+         printf("Estamos em Novembro\n");
+        break;
+        case 12:
+         printf("Estamos em Dezembro\n");
+        break;
+    }
+    system("Pause");
+    return 0;
+}
+
+Exercício 17--------------
+
+#include <stdio.h>
+
+int main(){
+    float b1,b2,h;
+    printf("Digite um numero para a base maior, outro para a menor e outro para a altura: ");
+    scanf("%f %f %f",&b1,&b2,&h);
+    if(b1>0 && b2>0){
+        printf("A area do trapezio eh: %f\n",(b1+b2)*h/2);
+    }
+    else{
+        printf("Um dos numeros digitados eh invalido\n");
+    }
+    system("Pause");
+    return 0;
+}
+
+Exercício 18------------
+
+#include <stdio.h>
+
+int main(){
+    int a;
+    float n1,n2;
+    printf("Escolha uma operação: \n(1) +\n(2) -\n(3) *\n(4) /\nDigite o numero correspondente a sua operacao: ");
+    scanf("%d",&a);
+    printf("\nAgora escolha dois numeros a serem operados: ");
+    scanf("%f %f",&n1,&n2);
+    switch (a){
+        case 1:
+        printf("Voce escolheu a adicao e o resultado eh: %f\n",n1+n2);
+        break;
+        case 2:
+        printf("Voce escolheu a subtracao e o resultado eh: %f\n",n1-n2);
+        break;
+        case 3:
+        printf("Voce escolheu a multiplicacao e o resultado eh: %f\n",n1*n2);
+        break;
+        case 4:
+        printf("Voce escolheu a divisao e o resultado eh: %f\n",n1/n2);
+        break;
+    }
+    system("Pause");
+    return 0;
+}
+
+Exercício 19--------------
+
+#include <stdio.h>
+
+int main(){
+    int x;
+    printf("Digite um numero qualquer: ");
+    scanf("%d",&x);
+    if((!(x%3)||!(x%5))&&!(!(x%3)&&!(x%5))){
+        printf("Esse numero eh divisivel exclusivamente por 3 ou por 5\n");
+    }
+    else{
+        printf("O numero digitado nao satisfaz as condicoes\n");
+    }
+    system("Pause");
+    return 0;
+}
