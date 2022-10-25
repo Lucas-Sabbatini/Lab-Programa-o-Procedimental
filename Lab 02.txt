@@ -849,3 +849,150 @@ int main()
    return 0;
 
 }
+
+
+Exercício 32-----------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   int codigo,quant;
+   printf("Digite o codigo do produto e a quantidade: ");
+   scanf("%d %d",&codigo,&quant);
+   switch(codigo){
+      case 100:
+         printf("O total a ser pago eh: %f",(quant*1.2));
+      break;
+      case 101:
+         printf("O total a ser pago eh: %f",(quant*1.3));
+      break;
+      case 102:
+         printf("O total a ser pago eh: %f",(quant*1.5));
+      break;
+      case 103:
+         printf("O total a ser pago eh: %f",(quant*1.2));
+      break;
+      case 104:
+         printf("O total a ser pago eh: %f",(quant*1.7));
+      break;
+      case 105:
+         printf("O total a ser pago eh: %f",(quant*2.2));
+      break;
+      case 106:
+         printf("O total a ser pago eh: %f",(quant*1.0)); 
+      break;
+      default:
+         printf("Codigo invalido");
+      break;
+
+   }
+   
+   return 0;
+   
+Exercício 33-----------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   float preco;
+   printf("Digite o preco de um produto: ");
+   scanf("%f",&preco);
+   if(preco < 50){
+      printf("O preco com aumento sera de: %f",preco*1.05);
+   }
+   else if(preco>=50&&preco<=100){
+      printf("O preco com aumento sera de: %f",preco*1.1);
+   }
+   else{
+      printf("O preco com aumento sera de: %f",preco*1.15);
+   }
+   
+   return 0;
+}
+
+Exercício 34----------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   float nota;
+   int faltas;
+   char conceito;
+   printf("Digite a nota de um aluno e o numero de faltas: ");
+   scanf("%f %d",&nota,&faltas);
+   if(nota > 0 && nota < 3.9){
+      conceito = faltas >20 ? 'E':'E';
+   }
+   else if(nota > 4 && nota < 4.9){
+      conceito = faltas >20 ? 'E':'D';
+   }
+   else if(nota > 5 && nota < 7.4){
+      conceito = faltas >20 ? 'D':'C';
+   }
+   else if(nota > 7.5 && nota < 8.9){
+      conceito = faltas >20 ? 'C':'B';
+   }
+   else if(nota > 9 && nota <= 10){
+      conceito = faltas >20 ? 'B':'A';
+   }
+   else{
+      printf("Nota invalida");
+   }
+   printf("O conceito do aluno foi: %c",conceito);
+   return 0;
+}
+
+Exercício 35-------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   int dia,mes,ano;
+   printf("Digite uma data: ");
+   scanf("%d %d %d",&dia,&mes,&ano);
+   if(mes>0&&mes<13){
+      if((mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12)&&dia<=31){
+         printf("Data valida");
+      }
+      else if(mes==2){
+         if(!(ano%4)&&ano%100){
+            if(dia<=29){
+               printf("Data valida");
+            }
+            else{
+               printf("Data invalida");
+            }
+    }
+    else if(dia<=28){
+         printf("Data valida");
+        }
+    else{
+      printf("Data invalida");
+    }
+      }
+      else if((mes==4||mes==6||mes==9||mes==11)&&dia<=30){
+         printf("Data valida");
+      }
+      else{
+         printf("Data invalida");
+      }
+   }
+   else{
+      printf("Data invalida");
+   }
+   return 0;
+}
+
+Exercício 36---------------
