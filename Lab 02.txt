@@ -677,9 +677,10 @@ Exercício 28---------------
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main()
-{
+{   float result;
     int x,y,z;
     char opt;
     printf("Escolha uma media:\n(a) geometrica \n (b) ponderada \n (c) harmonica \n (d) aritimetica \n");
@@ -688,19 +689,163 @@ int main()
     scanf("%d %d %d",&x,&y,&z);
     switch (opt){
     case 'a':
-        printf("A media geometrica dos numeros eh: ");
+         result = pow(x*y*z, 1.0/3.0);
+        printf("A media geometrica dos numeros eh: %f",result);
     break;
     case 'b':
-        printf("A media ponderada dos numeros eh: ");
+        result = (x +(y*2) + (z*3))/6.0;
+        printf("A media ponderada dos numeros eh: %f",result);
     break;
     case 'c':
-        printf("A media harmonica dos numeros eh: ");
+        result = 1.0/x + 1.0/y + 1.0/z;
+        result = 1.0/result;
+        printf("A media harmonica dos numeros eh: %f",result);
     break;
     case 'd':
-        printf("A media aritimetica dos numeros eh: %f",);
+        result = (x+y+z)/3.0;
+        printf("A media aritimetica dos numeros eh: %f",result);
     break;
     default:
-    break:
+    break;
     }
     return 0;
+}
+
+Exercício 29---------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   int i,acertos;
+   printf("Seja bem vindo a prova, vamos comecar\n");
+   for(i=0;i<5;i++){
+      int a,b,resp;
+      a = rand() % 100;
+      b = rand() % 100;
+      printf("Qual eh o valor da soma entre %d e %d ?\n",a,b);
+      scanf("%d",&resp);
+      if(resp ==(a+b)){
+         printf("\nParabens, voce acertou\n");
+         ++acertos;
+      }
+      else{
+         printf("\nVoce errou\n");
+      }
+   }
+   printf("A prova acabou e voce teve um total de %d acertos",acertos);
+   return 0;
+
+}
+
+Exercicio 30-------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   float a,b,c,maior,meio,menor;
+   printf("Digite 3 numeros: ");
+   scanf("%f %f %f",&a,&b,&c);
+   maior = a;
+   menor = a;
+   meio = a;
+   if (maior<b){
+      maior =b;
+      if(maior<c){
+         maior = c;
+      }
+   }
+   else if (maior<c){
+      maior =c;
+      if(maior<b){
+         maior = b;
+      }
+   }
+   if (menor>b){
+      menor =b;
+      if(menor>c){
+         menor = c;
+      }
+   }
+   else if (menor>c){
+      menor =c;
+      if(menor>b){
+         menor = b;
+      }
+   }
+   if(maior == a){
+      meio =b;
+      if(menor == b){
+         meio =c;
+      }
+   }
+   else  if(maior == b){
+      meio =a;
+      if(menor == a){
+         meio =c;
+      }
+   }
+   else  if(maior == c){
+      meio =b;
+      if(menor == b){
+         meio =a;
+      }
+   }
+
+   printf("%f %f %f",maior,meio,menor);
+   return 0;
+
+}
+
+Exercício 31------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   float altura,peso;
+   printf("Digite a altura e o peso de uma pessoa: ");
+   scanf("%f %f",&altura,&peso);
+   if(altura<1.2){
+      if(peso<60){
+      printf("A");
+   }
+   else if(peso>=60&&peso<=90){
+      printf("D");
+   }
+   else{
+      printf("G");
+   }
+   }
+   else if(altura>=1.2&&altura<=1.7){
+      if(peso<60){
+      printf("B");
+   }
+   else if(peso>=60&&peso<=90){
+      printf("E");
+   }
+   else{
+      printf("H");
+   }
+   }
+   else{
+      if(peso<60){
+      printf("C");
+   }
+   else if(peso>=60&&peso<=90){
+      printf("F");
+   }
+   else{
+      printf("I");
+   }
+   }
+   return 0;
+
 }
