@@ -995,4 +995,4 @@ int main()
    return 0;
 }
 
-Exercício 36---------------
+Exercício 36--------------
