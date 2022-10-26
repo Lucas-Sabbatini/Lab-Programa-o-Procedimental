@@ -673,7 +673,7 @@ int main()
     return 0;
 }
 
-Exercício 28---------------
+Exercício 28--------------
 
 #include <stdio.h>
 #include <stdlib.h>
