@@ -1106,3 +1106,70 @@ int main()
    }
    return 0;
 }
+
+
+Exercício 39-------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int salario,ano;
+   printf("Digite o salario de um empregado e o seu tempo de servico: ");
+   scanf("%d %d",&salario,&ano);
+   if(salario<=500){
+      salario *=1.25;
+   }
+   else if(salario<=1000){
+      salario *=1.20;
+   }
+   else if(salario<=1500){
+      salario *=1.15;
+   }
+   else if(salario<=2000){
+      salario *=1.10;
+   }
+   else{
+      printf("Voce nao tem direito a reajuste de salario\n");
+   }
+   if(ano<1){
+      printf("Voce nao tem direito a bonus de tempo de servico");
+   }
+   else if(ano>=1&&ano<=3){
+      printf("O seu salario reajustado eh: %d",salario+100);
+   }
+   else if(ano>=4&&ano<=6){
+      printf("O seu salario reajustado eh: %d",salario+200);
+   }
+   else if(ano>=7&&ano<=10){
+      printf("O seu salario reajustado eh: %d",salario+300);
+   }
+   else if(ano>10){
+      printf("O seu salario reajustado eh: %d",salario+500);
+   }
+   return 0;
+}
+
+Exercício 40------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int custo;
+   printf("Digite o custo de fabrica de um automovel: ");
+   scanf("%d",&custo);
+   if(custo<12000){
+      printf("O custo final do automovel sera: %f",custo*1.05);
+   }
+   else if(custo<=25000){
+      printf("O custo final do automovel sera: %f",(custo*1.10)+(custo*0.15));
+   }
+   else {
+      printf("O custo final do automovel sera: %f",(custo*1.15)+(custo*0.20));
+   }
+   
+   return 0;
+}
