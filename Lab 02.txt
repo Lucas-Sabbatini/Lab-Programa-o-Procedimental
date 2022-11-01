@@ -1029,3 +1029,80 @@ int main()
 }
 
 Exercício 37-----------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   int cheh,chem,sah,sam,horas;
+   printf("Digite o horario de chegada: ");
+   scanf("%d %d",&cheh,&chem);
+   printf("\nAgora digite o horario de saida: ");
+   scanf("%d %d",&sah,&sam);
+   chem = (cheh*60)+chem;
+   sam = (sah*60)+sam;
+   if(sam>chem){
+      horas = (sam-chem)/60;
+      horas += ((sam-chem) % 60) > 0 ? 1 : 0;
+   }
+   else{
+      horas = (1440-chem+sam)/60;
+      horas += ((1440+sam-chem) % 60) > 0 ? 1 : 0;
+   }
+   if(horas<=2){
+      printf("O total a pagar sera: %d",horas);
+   }
+   else if(horas<=4){
+      printf("O total a pagar sera: %f",2+(horas-2)*1.4);
+   }
+   else{
+      printf("O total a pagar sera: %f",4.8+(horas-4)*2);
+   }
+   return 0;
+}
+
+Exercício 38------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#define ANOATUAL 2022
+
+int main()
+{   
+   int dia,mes,ano;
+   printf("Digite uma data: ");
+   scanf("%d %d %d",&dia,&mes,&ano);
+   if(mes>0 && mes<13 && ano<=ANOATUAL){
+      if((mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12)&&dia<=31){
+         printf("Data valida");
+      }
+      else if(mes==2){
+         if(!(ano%4)&&ano%100){
+            if(dia<=29){
+               printf("Data valida");
+            }
+            else{
+               printf("Data invalida");
+            }
+    }
+    else if(dia<=28){
+         printf("Data valida");
+        }
+    else{
+      printf("Data invalida");
+    }
+      }
+      else if((mes==4||mes==6||mes==9||mes==11)&&dia<=30){
+         printf("Data valida");
+      }
+      else{
+         printf("Data invalida");
+      }
+   }
+   else{
+      printf("Data invalida");
+   }
+   return 0;
+}
