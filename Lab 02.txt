@@ -996,3 +996,36 @@ int main()
 }
 
 Exercício 36--------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{   
+   float v;
+   printf("Digite o valor da venda: ");
+   scanf("%f",&v);
+   if(v>=100000){
+      printf("O valor da comissao eh: %f reais",700+(0.16*v));
+   }
+   else if(v<100000&&v>=80000){
+      printf("O valor da comissao eh: %f reais",650+(0.14*v));
+   }
+   else if(v<80000&&v>=60000){
+      printf("O valor da comissao eh: %f reais",600+(0.14*v));
+   }
+   else if(v<60000&&v>=40000){
+      printf("O valor da comissao eh: %f reais",550+(0.14*v));
+   }
+   else if(v<40000&&v>=20000){
+      printf("O valor da comissao eh: %f reais",500+(0.14*v));
+   }
+   else if(v<20000){
+      printf("O valor da comissao eh: %f reais",400+(0.14*v));
+   }
+   system ("pause");
+   return 0;
+}
+
+Exercício 37-----------
