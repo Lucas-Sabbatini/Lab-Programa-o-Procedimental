@@ -28,3 +28,48 @@ int main(){
 		printf("%d\n",i++);
 	}while(i<=100);
 }
+
+Exercício 3------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int i=10;
+	while(i>=0){
+		printf("%d\n",i--);
+	}
+	printf("Fim!");
+}
+
+Exercício 4-------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int i=0;
+	for(i;i<=100000;i+=1000){
+		printf("%d\n",i);
+	}
+}
+
+Exercício 5------------------
+
+Exercício 23---------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	int i=1,j,n,cont=1;
+	printf("Digite um numero inteiro n: ");
+	scanf("%d",&n);
+	for(i;i<=n;i++){
+		j=1;
+		for(j;j<=i;j++){
+			printf("%d ",cont++);
+		}
+		printf("\n");
+	}
+}
