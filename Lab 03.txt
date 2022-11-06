@@ -88,6 +88,175 @@ int main()
    return 0;
 }
 
+Exercício 7-------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int val,i=1,soma=0,count=0;
+   for(i;i<=10;i++){
+      printf("Digite um valor(%d/10): ",i);
+      scanf("%d",&val);
+      if(val>=0){
+         soma+=val;
+         count++;
+      }
+      else{
+         printf("Valor negativo, sera desconsiderado\n");
+      }
+      
+   }
+   printf("A media dos valore digitados eh: %d",soma/count);
+   return 0;
+}
+
+Exercício 8--------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int val,i=1,maior,menor;
+   for(i;i<=10;i++){
+      printf("Digite um valor(%d/10): ",i);
+      scanf("%d",&val);
+      if(i==1){
+         maior =val;
+         menor =val;
+      }
+      else if(val>maior){
+         maior = val;
+      }
+      else if(val<menor){
+         menor = val;
+      }
+      
+   }
+   printf("O maior valor digitado eh: %d\nE o menor valor digitado eh: %d",maior,menor);
+   return 0;
+}
+
+Exercício 9-------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int n,i=1,val=1;
+   printf("Digite um numero inteiro N: ");
+   scanf("%d",&n);
+   printf("Os %d primeiros numeros naturais impares sao: \n",n);
+   for(i;i<=n;i++){
+      printf("%d- %d\n",i,val);      
+      val +=2;
+   }
+   return 0;
+}
+
+Exercício 10----------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int n,i=0,val=1;
+   for(i;i<50;i++){
+      n +=val;
+      val +=2;
+   }
+    printf("A soma dos 50 primeiros numeros pares eh: %d",n);
+   return 0;
+}
+
+Exercício 11------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int n;
+   printf("Digite um numero inteiro n: ");
+   scanf("%d", &n);
+   for(int i=0; i<=n; i++){
+      printf("%d ",i);
+   }
+   return 0;
+}
+
+Exercício 12-------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int n,soma=0;
+   printf("Digite um numero inteiro n: ");
+   scanf("%d", &n);
+   for(int i=1; i<n; i++){
+      if(!(n%i)){
+         soma +=i;
+      }
+   }
+   printf("A soma dos divisores de %d eh: %d",n,soma);
+   return 0;
+}
+
+Exercício 13-------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int n,soma=0;
+   for(int i=0;i<=1000;i++){
+      if(!(i%3)||!(i%5)){
+         soma+=i;
+      }
+   }
+   printf("A soma dos multiplos de 3 ou 5 menores que 1000 eh: %d",soma);
+   return 0;
+}
+
+Exercício 14-----------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{   
+   int n,d1,d2;
+   srand(time(NULL));
+   printf("Digite um numero inteiro n: ");
+   scanf("%d",&n);
+   for(int i=1;i<=n;i++){
+      d1= rand() % 6;
+      d2= rand() % 6;
+      printf("Rolagem %d- d1:%d d2:%d ",i,d1,d2);
+      if(d1==d2){
+         printf("d1=d2\n");
+      }
+      else if(d1>d2){
+         printf("d1>d2\n");
+      }
+      else if(d1<d2){
+         printf("d1<d2\n");
+      }
+   }
+   return 0;
+}
+
+Exercício 15---------
+
+
 Exercício 23---------
 
 #include <stdio.h>
