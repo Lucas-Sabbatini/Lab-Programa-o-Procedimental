@@ -56,6 +56,38 @@ int main(){
 
 Exercício 5------------------
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int val,i=1,soma=0;
+   for(i;i<=10;i++){
+      printf("Digite um valor(%d/10): ",i);
+      scanf("%d",&val);
+      soma+=val;
+   }
+   printf("A soma dos valore digitados eh: %d",soma);
+   return 0;
+}
+
+Exercício 6--------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+   int val,i=1,soma=0;
+   for(i;i<=10;i++){
+      printf("Digite um valor(%d/10): ",i);
+      scanf("%d",&val);
+      soma+=val;
+   }
+   printf("A media dos valore digitados eh: %d",soma/10);
+   return 0;
+}
+
 Exercício 23---------
 
 #include <stdio.h>
