@@ -360,6 +360,63 @@ int main(){
    printf("Depois de %d anos ze sera maior que chico",i);
 }
 
+Exercício 19-----------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+   int val,resto;
+   printf("Digite o valor que deseja sacar: ");
+   scanf("%d",&val);
+   resto = val;
+   for(int i=0; i<7;i++){
+      switch(i){
+         case 0:
+         if(resto/100){
+            printf("100: %d\n",resto/100);
+            resto %= 100;
+         }
+         break;
+         case 1:
+         if(resto/50){
+            printf("50: %d\n",resto/50);
+            resto %= 50;
+         }
+         break;
+         case 2:
+         if(resto/20){
+            printf("20: %d\n",resto/20);
+            resto %= 20;
+         }
+         break;
+         case 3:
+         if(resto/10){
+            printf("10: %d\n",resto/10);
+            resto %= 10;
+         }
+         break;
+         case 4:
+         if(resto/5){
+            printf("5: %d\n",resto/5);
+            resto %= 5;
+         }
+         break;
+         case 5:
+         if(resto/2){
+            printf("2: %d\n",resto/2);
+            resto %= 2;
+         }
+         break;
+         case 6:
+         if(resto){
+            printf("1: %d\n",resto);
+         }
+      }
+   }
+}
+
+
 
 Exercício 23---------
 
