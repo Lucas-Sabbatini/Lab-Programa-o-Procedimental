@@ -417,6 +417,49 @@ int main(){
 }
 
 
+Exercício 20----------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+   int i,j,soma=0,primo;
+   for(i=1;i<=2000000;i++){
+      primo =1;
+      for(j=2;j<i;j++){
+         if(!(i%j)){
+            primo =0;
+         }
+      }
+      soma += primo == 1 ? i : 0;
+   }
+   printf("A soma de todos os primos entre 0 e 2 milhoes eh: %d",soma);
+}
+
+Exercício 21------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+   int a,b,j,soma=0,primo;
+   printf("Digite os numeros a e b para calcularmos os primos: ");
+   scanf("%d %d",&a,&b);
+   for(a=1;a<=b;a++){
+      primo =1;
+      for(j=2;j<a;j++){
+         if(!(a%j)){
+            primo =0;
+         }
+      }
+      if (primo){
+         printf("%d\n",a);
+         soma++;
+      }
+   }
+   printf("A quantidade de primos entre %d e %d eh: %d",a,b,soma);
+}
+
 
 Exercício 23---------
 
