@@ -460,6 +460,44 @@ int main(){
    printf("A quantidade de primos entre %d e %d eh: %d",a,b,soma);
 }
 
+Exercício 22---------
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, v1, v2;
+    int x, y, z;
+    int u, d, c, m, dm, cm;
+    x = 0;
+
+    for (a=999; a>=100; a--){
+        for (b=999; b>=100; b--){
+            v1 = a*b;
+            
+            u =v1/100000;
+            d =((v1/10000)-(u*10))*10;
+            c =((v1/1000)-(u*100)-(d))*100;
+            m =((v1/100)-(u*1000)-(d*10)-(c/10))*1000;
+            dm =((v1/10)-(u*10000)-(d*100)-(c)-(m/100))*10000;
+            cm =((v1)-(u*100000)-(d*1000)-(c*10)-(m/10)-(dm/1000))*100000;
+            
+            v2 = u + d + c + m + dm + cm;
+            
+            if ((v1 == v2) && (v1 > x)){
+                x = v1;
+                y = a;
+                z = b;
+            }
+        }
+    }
+
+    printf("o maior palindromo eh o formado por %d*%d=%d.", y, z, x);
+    
+    return 0;
+}
+
+
 
 Exercício 23---------
 
