@@ -85,3 +85,43 @@ int checksquare(int d){
     printf("Nao eh quadrado perfeito");
    }
 }
+
+
+Exercício 5----------------
+
+#include <stdio.h>
+#include <math.h>
+#define PI 3.1415
+
+int vol(int raio);
+int main()
+{
+    int param;
+    scanf("%d", &param);
+    printf("O volume da esfera eh: %d",vol(param));
+    return 0;
+}
+
+int vol(int raio){
+   return (4/3)*PI*raio*raio*raio;
+}
+
+Exercício 6-----------------
+
+#include <stdio.h>
+#include <math.h>
+
+int min(int h,int m,int s);
+int main()
+{
+    int p1,p2,p3;
+    scanf("%d %d %d", &p1,&p2,&p3);
+    printf("O valor convertido pra min eh: %d",min(p1,p2,p3));
+    return 0;
+}
+
+int min(int h,int m,int s){
+   return (h*3600) + (m*60) +s;
+}
+
+Exercício 7-----------------
