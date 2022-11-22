@@ -62,3 +62,26 @@ int checknum(int d){
     return -1;
    }
 }
+
+
+Exercício 4-------------
+
+#include <stdio.h>
+#include <math.h>
+
+int checksquare(int d);
+int main()
+{
+    checksquare(7);
+    return 0;
+}
+
+int checksquare(int d){
+   int a = sqrt(d);
+   if((a*a)==d){
+    printf("Eh quadrado perfeito");
+   }
+   else{
+    printf("Nao eh quadrado perfeito");
+   }
+}
