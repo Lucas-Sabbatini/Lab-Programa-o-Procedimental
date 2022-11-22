@@ -161,3 +161,38 @@ float hip(float a,float b){
 }
 
 Exercício 9-----------
+
+#include <stdio.h>
+#include <math.h>
+#define PI 3.141592
+
+float vol(float a,float r);
+int main()
+{
+    float p1,p2;
+    scanf("%f %f", &p1,&p2);
+    printf("O volume do cilindro eh: %f",vol(p1,p2));
+    return 0;
+}
+
+float vol(float a,float r){
+   return PI*r*r*a;
+}
+
+Exercício 10----------
+
+#include <stdio.h>
+
+
+float vol(float a,float r);
+int main()
+{
+    float p1,p2;
+    scanf("%f %f", &p1,&p2);
+    printf("O maior dos numeros eh: %f",vol(p1,p2));
+    return 0;
+}
+
+float vol(float a,float r){
+   return a>=r ? a:r;
+}
