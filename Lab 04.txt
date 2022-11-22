@@ -276,3 +276,51 @@ float media(float a,float r,char c){
     default: return 0;
    }
 }
+
+Exercício 14-------------
+
+#include <stdio.h>
+
+void anal(float km,float l);
+int main(){
+    float p1,p2;
+    scanf("%f %f",&p1,&p2);
+    anal(p1,p2);
+
+}
+
+void anal(float km,float l){
+    float kml = km/l;
+    if(kml<8)
+        printf("venda o carro");
+    if(kml>=8&&kml<=14)
+        printf("Economico");
+    if(kml>14)
+        printf("Super economico");
+}
+
+Exercício 15------------
+
+#include <stdio.h>
+
+void triangulo(float a,float b,float c);
+int main(){
+    float p1,p2,p3;
+    scanf("%f %f %f",&p1,&p2,&p3);
+    triangulo(p1,p2,p3);
+
+}
+
+void triangulo(float a,float b,float c){
+    if((a<b+c)&&(b<a+c)&&(c<b+a))
+        printf("eh triangulo\n");
+    if(a==b&&b==c){
+        printf("Esse triangulo eh equilatero");
+    }
+    else if(a==b||b==c||c==a){
+        printf("Esse triangulo eh isoceles");
+    }
+    else{
+        printf("Esse triangulo eh escaleno");
+    }
+}
