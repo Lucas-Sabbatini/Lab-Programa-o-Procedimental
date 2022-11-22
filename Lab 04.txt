@@ -1,1 +1,16 @@
+Exercício 1--------------
 
+#include <stdio.h>
+int dobro(int a);
+int main()
+{
+    printf("%d",dobro(4));
+    return 0;
+}
+
+int dobro(int a){
+    return 2*a;
+}
+
+
+Exercíco 2
