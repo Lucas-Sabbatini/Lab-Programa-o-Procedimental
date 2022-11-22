@@ -220,3 +220,59 @@ float media(float a,float r,float b,char c){
     break;
    }
 }
+
+
+Exercício 12----------------
+
+#include <stdio.h>
+
+
+int soma(int a);
+int main()
+{
+    int p1;
+    scanf("%d",&p1);
+    printf("A soma dos algarismos: %d",soma(p1));
+    return 0;
+}
+
+int soma(int a){
+    int i=1;
+    int l =0;
+    int soma =0;
+   while (a/i){
+    i*=10;
+    l++;
+   }
+   i=1;
+   for(int j=1;j<=l;j++){
+    soma += (a%(i*10))/i;
+    i*=10;
+   }
+   return soma;
+}
+
+Exercício 13----------
+
+#include <stdio.h>
+
+
+float media(float a,float r,char c);
+int main()
+{
+    float p1,p2;
+    char p3;
+    scanf("%f %f %c", &p1,&p2,&p3);
+    printf("O resultado da conta escolhida eh: %f",media(p1,p2,p3));
+    return 0;
+}
+
+float media(float a,float r,char c){
+   switch(c){
+    case '+': return a+r; break;
+    case '-': return a-r; break;
+    case '*': return a*r; break;
+    case '/': return a/r; break;
+    default: return 0;
+   }
+}
