@@ -157,3 +157,25 @@ int main()
 
 Exercício 8------------------
 
+#include <stdio.h>
+
+int main()
+{
+    int ent,rep=0,vetor[10];
+    for(int i = 0; i < 10; i++){
+        do{
+            scanf("%d", &ent);
+            rep =0;
+            for(int j = 0; j < i; j++){
+                if(vetor[j] == ent){
+                    printf("Numeros repetidos, digite outro numero\n");
+                    rep=1;
+                }
+            }
+            if(!rep)
+                vetor[i] = ent;
+        }while(rep);
+    }
+    return 0;
+}
+
