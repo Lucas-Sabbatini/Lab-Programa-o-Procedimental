@@ -87,3 +87,73 @@ int main(){
         printf("%d ",vetor[i]);
     }
 }
+
+Exercício 6------------------
+
+#include <stdio.h>
+
+
+int primo(int a);
+int main()
+{
+    int vetor[10];
+    for(int i = 0; i < 10; i++){
+        scanf("%d", &vetor[i]);
+    }
+    for(int j=0;j<10;j++){
+        
+        if(primo(vetor[j])==1){
+            printf("%d- %d eh primo\n",j,vetor[j]);
+        }
+    }
+        
+  
+    
+    return 0;
+}
+
+int primo(int a){
+    int stop = a/2;
+    if((a==3)||(a==2)||(a==5)||(a==7)||(a==11)){
+        return 1;
+    }
+    if((a==0)||(a==1)||!(a%2)||!(a%3)||!(a%5)||!(a%7)||!(a%11)){
+        return 0;
+    }
+    for(int i = 3;i<=stop;i+=2) {
+        if(!(a%i)){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+Exercício 7-----------------
+
+#include <stdio.h>
+
+int main()
+{
+    int par=0,impar=0,vetor[6];
+    for(int i = 0; i < 6; i++){
+        scanf("%d", &vetor[i]);
+    }
+    for(int j=0;j<6;j++){
+        if(vetor[j]%2){
+            printf("O elemento da posicao %d eh impar\n",j);
+            impar += vetor[j];
+        }
+        else{
+            printf("O elemento da posicao %d eh par\n",j);
+            par +=vetor[j];
+        }
+    }
+    printf("A soma de todos os numeros pares eh %d\nA soma de todos os numeros impares eh: %d",par,impar);
+        
+  
+    
+    return 0;
+}
+
+Exercício 8------------------
+
