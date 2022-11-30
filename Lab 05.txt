@@ -1,1 +1,49 @@
+Exercício 1------------------
 
+#include <stdio.h>
+
+int main(){
+    int vetor[6] = {1, 0, 5, -2, -5, 7};
+    int soma = 0;
+    for(int i=0;i<6;i++){
+        soma += vetor[i];
+    }
+    printf("%d\n",soma);
+
+    vetor[4] = 100;
+
+    for(int j=0;j<6;j++){
+        printf("Posicao %d: %d\n",j,vetor[j]);
+    }
+}
+
+Exercício 2------------------
+
+#include <stdio.h>
+
+int main(){
+    int x,y,vetor[8];
+    for(int i=0;i<8;i++){
+        printf("Digite o valor da posicao %d do vetor: ",i);
+        scanf("%d",&vetor[i]);
+    }
+    printf("\n Agora digite dois valores de posicoes aleatorios");
+    scanf("%d %d",&x,&y);
+    printf("A soma das posicoes %d e %d eh: %d",x,y,vetor[x]+vetor[y]);
+}
+
+Exercício 3-------------------
+
+#include <stdio.h>
+
+int main(){
+    int x,y,vetor[6];
+    printf("Digite 6 valores inteiros");
+    for(int i=0;i<6;i++){
+        scanf("%d",&vetor[i]);
+    }
+    printf("Os valores digitados ao contrario sao: ");
+    for(int j=5;j>=0;j--){
+        printf("%d, ",vetor[j]);
+    }
+}
