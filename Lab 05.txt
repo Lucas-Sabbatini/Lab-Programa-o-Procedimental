@@ -327,7 +327,50 @@ int main(){
 }
 
 
-Exercício 6--------------------
+Exercício 6-------------------
+
+#include <stdio.h>
+
+
+int main(){
+    int ent,matriz[4] [4];
+    printf("Preencha a matriz com valores entre 1 e 20");
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            do{
+            scanf("%d",&ent);
+            }while(ent>20 && ent<1);
+            matriz[i][j] = ent;
+        }
+    }
+
+
+    printf("===== Matriz normal =====\n");
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            printf("%d ",matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+           matriz[i][j] = j>i ? 0 : matriz[i][j];
+        }
+    }
+
+    printf("\n===== Matriz Transformada =====\n");
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            printf("%d ",matriz[i][j]);
+        }
+        printf("\n");
+    }
+   return 0;
+}
+
+
+Exercício 7--------------------
 
 #include <stdio.h>
 #include<stdlib.h>
@@ -356,4 +399,4 @@ int main(){
 }
 
 
-Exercício 7--------------------------------
+
