@@ -231,3 +231,32 @@ int main(){
         printf("\n");
     }
 }
+
+
+Exercício 3-----------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int maior,mi=0,mj=0,matriz[4] [4];
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            scanf("%d",&matriz[i][j]);
+        }
+    }
+    maior = matriz[0][0];
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            if(matriz[i][j]>maior){
+                maior = matriz[i][j];
+                mi = i;
+                mj = j;
+            }
+        }
+    }
+    printf("O maior elemento da matriz eh: %d linha-%d coluna-%d",maior,mi,mj);
+}
+
+
+Exercício 4-------------------------------------
+
