@@ -127,3 +127,36 @@ int main(){
 
 Exercício 8---------------
 
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+    char carros[5][50];
+    int consumo[5];
+    int menor;
+    int economico;
+    printf("Digite o nome de cinco carros: ");
+    for(int i=0;i<5;i++){
+        fgets(carros[i], 49, stdin);
+    }
+    printf("\nAgora digite o respectivo consumo de cada carro: ");
+    for(int i=0;i<5;i++){
+        scanf("%d",&consumo[i]);
+    }
+    
+    printf("Letra a) \n");
+    menor = consumo[0];
+    for(int i=0;i<5;i++){
+        if(consumo[i]<menor){
+            menor = consumo[i];
+            economico = i;
+        }
+    }
+    printf("O carro mais economico eh: %s",carros[economico]);
+
+    printf("Letra b)\n");
+    for(int i=0;i<5;i++){
+        printf("O %s vai gastar %f litros depois de 1000 quilometros",carros[i],1000.0/consumo[i]);
+    }
+}
