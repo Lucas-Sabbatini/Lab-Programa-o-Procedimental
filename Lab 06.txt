@@ -103,3 +103,27 @@ int main(){
     }
     printf("A string minuscula eh: %s: ",string);
 }
+
+
+Exercício 7---------------
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+    char vetor[50];
+    printf("Digite uma frase: ");
+    fgets(vetor, 49, stdin);
+    for(int i = 0; i <strlen(vetor); i++){
+        if(vetor[i] == ' '){
+            for(int j=i;j<strlen(vetor);j++){
+                vetor[j]= vetor[j+1];
+            }
+        }
+    }
+    printf("O vetor de caracteres digitado sem os espacos eh: %s: ",vetor);
+}
+
+Exercício 8---------------
+
