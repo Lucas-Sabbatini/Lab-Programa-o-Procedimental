@@ -48,4 +48,39 @@ int main(){
 
 Exercício 4--------------------------
 
+#include <stdio.h>
+#include <string.h>
 
+
+int main(){
+    char palavra[50];
+    char caractere = 'X';
+    int cont=0;
+    printf("Digite uma palavra: ");
+    fgets(palavra, 50, stdin);
+    for(int i=0;i<strlen(palavra);i++){
+        if(palavra[i]=='a'||palavra[i]=='e'||palavra[i]=='i'||palavra[i]=='o'||palavra[i]=='u'){
+            palavra[i] = caractere;
+            cont++;
+        }
+    }
+    printf("O numer de vogais eh %d || E a palavra renovada ficou assim: %s",cont,palavra);
+}
+
+Exercício 5---------------------------
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+    char string[50];
+    printf("Digite uma palavra: ");
+    fgets(string, 49, stdin);
+    for(int i = 0; i <strlen(string); i++){
+        if(string[i]>=65&&string[i]<=90){
+            string[i]+=32;
+        }
+    }
+    printf("A string minuscula eh: %s: ",string);
+}
