@@ -1,1 +1,33 @@
+Exercício 1-------------------
 
+#include <stdio.h>
+
+
+int main(){
+    char string[50];
+    printf("Digite uma frase: ");
+    fgets(string, 50, stdin);
+    printf("A string que voce digitou foi: %s",string);
+}
+
+
+Exercício 2-------------------
+
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+    int soma=0;
+    char bin[50];
+    printf("Digite uma sequência de uns e zeros: ");
+    fgets(bin, 50, stdin);
+    for(int i=0;i<strlen(bin);i++){
+        printf("E\n");
+        soma += bin[i]=='1' ? 1 : 0;
+    }
+    printf("O numero de uns que aparece na string digitada eh: %d",soma);
+}
+
+
+Exercício 3-----------------------
