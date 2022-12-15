@@ -1,3 +1,42 @@
+Exercício 10-------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int M[5][5],SL[5],SC[5],i,j;
+
+    for(i=0;i<5;i++){
+        SL[i] = 0;
+        SC[i] = 0;
+        for(j=0;j<5;j++){
+            scanf("%d",&M[i][j]);
+        }
+    }
+
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+            SL[i]+=M[i][j];
+            SC[i]+=M[j][i];
+        }
+    }
+    for(j=0;j<5;j++){
+        for(i=0;i<5;i++){
+            printf("%d  ",M[j][i]);
+        }
+        printf("\n");
+    }
+    printf("\n\n\nSoma das linhas: ");
+    for(i=0;i<5;i++){
+        printf("%d ",SL[i]);
+    }
+    printf("\nSoma das colunas: ");
+    for(i=0;i<5;i++){
+        printf("%d ",SC[i]);
+    }
+
+    return 0;
+}
+
 Exercício 13-------------------------------
 #include <stdio.h>
 #include <math.h>
