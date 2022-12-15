@@ -73,3 +73,37 @@ int main(){
     printf("A area do retangulo eh: %f",base*altura);
     return 0;
 }
+
+Exercício 14----------------
+
+#include <stdio.h>
+#include <string.h>
+
+struct telefone{
+    int ddd;
+    char numero[12];
+};
+
+int main(){
+    int i;
+    struct telefone telefone[2];
+    for(i=0;i<2;i++){
+        setbuf(stdin,NULL);
+        printf("Digite um DDD: ");
+        scanf("%d",&telefone[i].ddd);
+        setbuf(stdin,NULL);
+        printf("Agora digite um numero: ");
+        gets(telefone[i].numero);
+    }
+    for(int i=11;i>1;i--){
+        telefone[0].numero[i] = telefone[0].numero[i-1];
+        telefone[1].numero[i] = telefone[1].numero[i-1];
+    }
+
+    telefone[0].numero[1] = ' ';
+    telefone[1].numero[1] = ' ';
+    for(i=0;i<2;i++){
+        printf("O numero eh: (%d) %s\n",telefone[i].ddd,telefone[i].numero);
+    }
+    return 0;
+}
