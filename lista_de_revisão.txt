@@ -1,0 +1,36 @@
+Exercício 13-------------------------------
+#include <stdio.h>
+#include <math.h>
+
+struct ponto{
+    int x;
+    int y;
+};
+
+struct retangulo{
+    struct ponto ie;
+    struct ponto sd;
+};
+
+
+
+int main(){
+    char cord[4][3] = {"SE","SD","IE","ID"};
+    float base,altura;
+    struct ponto pontos[4];
+    struct retangulo retangulo;
+
+    for(int i=0; i<4; i++){
+        printf("\nDigite o x e o y do ponto %s",cord[i]);
+        scanf("%d %d",&pontos[i].x,&pontos[i].y);
+    }
+
+    retangulo.ie = pontos[2];
+    retangulo.sd = pontos[1];
+
+    base = sqrt((pontos[0].x-pontos[1].x)*(pontos[0].x-pontos[1].x) + (pontos[0].y-pontos[1].y)*(pontos[0].y-pontos[1].y));
+    altura = sqrt((pontos[0].x-pontos[2].x)*(pontos[0].x-pontos[2].x) + (pontos[0].y-pontos[2].y)*(pontos[0].y-pontos[2].y));
+
+    printf("A area do retangulo eh: %f",base*altura);
+    return 0;
+}
