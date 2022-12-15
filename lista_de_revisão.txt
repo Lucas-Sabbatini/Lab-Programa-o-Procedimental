@@ -1,3 +1,41 @@
+Exercício 7--------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int vet[10],menor[3],maior,i,j,menori;
+
+    for(i=0;i<10;i++){
+        scanf("%d",&vet[i]);
+    }
+
+    maior = vet[0];
+    
+
+    for(i=0;i<10;i++){
+        if(maior<vet[i]){
+            maior = vet[i];
+        }
+    }
+    menor[0] = maior;
+    menor[1] = maior;
+    menor[2] = maior;
+
+
+    for(j=0;j<3;j++){
+        for(i=0;i<10;i++){
+            if(menor[j]>vet[i]){
+                menor[j] =vet[i];
+                menori = i;
+            }
+        }
+        vet[menori] = maior;
+    }
+
+    printf("Os 3 menors valores do vetor sao: %d %d %d",menor[0],menor[1],menor[2]);
+    return 0;
+}
+
 Exercício 10-------------------------------
 
 #include <stdio.h>
