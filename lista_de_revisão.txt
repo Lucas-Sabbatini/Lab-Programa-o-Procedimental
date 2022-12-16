@@ -123,6 +123,32 @@ int main(){
 
 Exercício 8--------------------------------
 
+#include <stdio.h>
+
+int main(){
+    int val[5],maior,menor,i;
+    float media;
+    printf("Entre com cinco valores inteiros");
+    for(i=0;i<5;i++){
+        printf("%d- ",i+1);
+        scanf("%d",&val[i]);
+    }
+    maior = val[0];
+    menor = val[0];
+    for(i=0;i<5;i++){
+        if(maior<val[i]){
+            maior = val[i];
+        }
+        else if(menor>val[i]){
+            menor = val[i];
+        }
+        media += val[i];
+    }
+    media = media/5.0;
+    printf("O maior valor eh: %d\nO menor valor eh: %d\nA media dos valores eh: %f",maior,menor,media);
+    return 0;
+}
+
 
 Exercício 10-------------------------------
 
