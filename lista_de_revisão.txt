@@ -64,6 +64,25 @@ int main(){
     return 0;
 }
 
+
+Exercício 6--------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int n,i,j,count=0,numbr=0;
+    printf("Digite o intiero n, i e j respectivamente: ");
+    scanf("%d %d %d",&n,&i,&j);
+
+    while(count<n){
+        if(!(numbr%i)||!(numbr%j)){
+            printf("%d, ",numbr);
+            count++;
+        }
+        numbr++;
+    }
+}
+
 Exercício 7--------------------------------
 
 #include <stdio.h>
@@ -101,6 +120,9 @@ int main(){
     printf("Os 3 menors valores do vetor sao: %d %d %d",menor[0],menor[1],menor[2]);
     return 0;
 }
+
+Exercício 8--------------------------------
+
 
 Exercício 10-------------------------------
 
