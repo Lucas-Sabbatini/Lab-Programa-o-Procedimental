@@ -1,3 +1,31 @@
+Exercício 3--------------------------------
+
+#include <stdio.h>
+
+int main(){
+    char a;
+    printf("Digite a primeira letra do seu estado civil");
+    scanf("%c",&a);
+    switch(a) {
+        case 'c':
+            printf("Indicação: Caramel Sweet & Salt");
+        break;
+        case 's':
+            printf("Indicação: London Pub");
+        break;
+        case 'v':
+            printf("Indicação: XI Baile da Melhor Idade");
+        break;
+        case 'd':
+            printf("Indicação: Academia Smart Fit");
+        break;
+    }
+    return 0;
+}
+
+Exercício 4---------------------------------
+
+
 Exercício 7--------------------------------
 
 #include <stdio.h>
