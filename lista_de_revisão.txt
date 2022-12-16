@@ -149,6 +149,33 @@ int main(){
     return 0;
 }
 
+Exercício 9--------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int matriz[4][5],i,j,menor,menori,menorj;
+    printf("Vamos preencher a nossa matriz");
+    for(i=0;i<4;i++){
+        for(j=0;j<5;j++){
+            scanf("%d",&matriz[i][j]);
+        }
+    }
+
+    for(i=0;i<4;i++){
+        for(j=0;j<5;j++) {
+            if(menor>matriz[i][j]){
+                menor = matriz[i][j];
+                menori = i;
+                menorj = j;
+            }
+        }
+    }
+
+    printf("O menor elemento da matriz eh: %d[%d][%d]",menor,menori,menorj);
+    return 0;
+}
+
 
 Exercício 10-------------------------------
 
