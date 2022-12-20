@@ -1,0 +1,51 @@
+Exercício 1---------------------------------------
+
+#include <stdio.h>
+
+struct data{
+    int dia;
+    int mes;
+    int ano;
+};
+
+struct horario{
+    int hora;
+    int minuto;
+    int segundo;
+};
+
+struct compromisso{
+    char nome[20];
+    struct horario horario;
+    struct data data;
+};
+int main(){
+    struct compromisso lavarCarro;
+    return 0;
+}
+
+Exercício 2-------------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+
+struct pessoa{
+    char nome[20];
+    int idade;
+    char endereco[50];
+};
+
+int main(){
+
+    struct pessoa p1;
+    printf("Digite o seu nome");
+    gets(p1.nome);
+    printf("Agora digite a sua idade: ");
+    scanf("%d",&p1.idade);
+    printf("Por ultimo o seu endereco: ");
+    setbuf(stdin,NULL);
+    gets(p1.endereco);
+
+
+    printf("\n\n\nNome: %s\nIdade: %d\nEndereco: %s",p1.nome,p1.idade,p1.endereco);
+}
