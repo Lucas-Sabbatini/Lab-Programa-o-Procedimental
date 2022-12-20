@@ -49,3 +49,35 @@ int main(){
 
     printf("\n\n\nNome: %s\nIdade: %d\nEndereco: %s",p1.nome,p1.idade,p1.endereco);
 }
+
+
+Exercício 3-----------------------
+
+#include <stdio.h>
+#include <string.h>
+
+struct aluno{
+    char nome[20];
+    int matricula;
+    char curso[20];
+};
+
+int main(){
+    int i;
+    struct aluno alunos[5];
+    for(i=0;i<5;i++){
+        printf("Digite o seu nome");
+        gets(alunos[i].nome);
+        printf("Agora digite a sua matricula: ");
+        scanf("%d",&alunos[i].matricula);
+        printf("Por ultimo o seu curso: ");
+        setbuf(stdin,NULL);
+        gets(alunos[i].curso);
+    }
+    
+
+    for(i=0;i<5;i++) {
+        printf("\n\n\nNome: %s\nMatricula: %d\nCurso: %s",alunos[i].nome,alunos[i].matricula,alunos[i].curso);
+    }
+    return 0;
+}
