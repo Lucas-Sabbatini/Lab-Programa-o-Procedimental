@@ -140,3 +140,30 @@ int main(){
 
     return 0;
 }
+
+
+Exercício 5--------------------------------------
+
+#include <stdio.h>
+
+
+struct vetor{
+    float a;
+    float b;
+    float c;
+};
+
+int main(){
+    struct vetor r1,r2,r3;
+    printf("Agora digite a,b e c do primeiro vetor: ");
+    scanf("%f %f %f", &r1.a, &r1.b, &r1.c);
+    printf("Agora digite a,b e c do segundo vetor: ");
+    scanf("%f %f %f", &r2.a, &r2.b, &r2.c);
+
+    r3.a = r1.a + r2.a;
+    r3.b = r1.b + r2.b;
+    r3.c = r1.c + r2.c;
+
+    printf("R3: \n a = %f\n b = %f\n c = %f",r3.a,r3.b,r3.c);
+    return 0;
+}
