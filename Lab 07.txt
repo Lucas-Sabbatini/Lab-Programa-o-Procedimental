@@ -81,3 +81,62 @@ int main(){
     }
     return 0;
 }
+
+
+Exercício 4-----------------------------
+
+#include <stdio.h>
+
+struct aluno{
+    char nome[20];
+    int matricula;
+    int n1;
+    int n2;
+    int n3;
+};
+
+int main(){
+    int i,man1,man1i,mamedi,menmedi;
+    float media[5],mamed,menmed;
+    struct aluno alunos[5];
+
+    for(i=0;i<5;i++){
+        printf("Digite o nome do aluno %d: ",i+1);
+        setbuf(stdin,NULL);
+        gets(alunos[i].nome);
+        printf("Agora digite numero de maricula, nota da primeira prova, segunda e terceira respectivamente: ");
+        scanf("%d %d %d %d",&alunos[i].matricula,&alunos[i].n1,&alunos[i].n2,&alunos[i].n3);
+    }
+
+    man1 = alunos[0].n1;
+    mamed = 0;
+    menmed = 10;
+
+
+    for(i=0;i<5;i++){
+        media[i] = (alunos[i].n1 + alunos[i].n2 + alunos[i].n3)/3.0;
+        if(man1<alunos[i].n1){
+            man1 = alunos[i].n1;
+            man1i = i;
+        }
+        if(media[i]>mamed){
+            mamed = media[i];
+            mamedi = i;
+        } 
+        if(media[i]<menmed){
+            menmed = media[i];
+            menmedi = i;
+        }
+        if(media[i]>=6){
+            printf("O aluno %s foi aprovado\n",alunos[i].nome);
+        }
+        else{
+            printf("O aluno %s foi reprovado\n",alunos[i].nome);
+        }
+    }
+    printf("O aluno com a maior nota na p1 eh o/a %s, com incriveis %d\n",alunos[man1i].nome,man1);
+    printf("O aluno com maior media geral eh o %s com invriveis %.2f\n",alunos[mamedi].nome,mamed);
+    printf("O aluno com a menor media geral foi o %s com %.2f",alunos[menmedi].nome,menmed);
+
+    return 0;
+}
