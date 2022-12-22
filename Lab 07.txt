@@ -329,3 +329,78 @@ int main(){
         printf("\nNaipe: %c Valor: %c",p2.cartas[i].naipe,p2.cartas[i].valor);
     }
 }
+
+Exercício 9-----------------------------------------
+
+#include <stdio.h>
+
+struct carro {
+    char marca[16];
+    int ano;
+    int preco;
+};
+
+int main(){
+    int i,p;
+    struct carro carros[5];
+    printf("Digite os valores dos carros: \n");
+    for(i=0;i<5;i++){
+        printf("Marca: ");
+        setbuf(stdin, NULL);
+        gets(carros[i].marca);
+        printf("Ano: ");
+        scanf("%d", &carros[i].ano);
+        printf("Preco: ");
+        scanf("%d", &carros[i].preco);
+    }
+    
+    do{
+        printf("Agora digite o valor p: ");
+        scanf("%d",&p);
+        for(i=0;i<5;i++){
+            if(p>=carros[i].preco){
+                printf("O %s esta custando %d reais\n",carros[i].marca,carros[i].preco);
+            }
+        }
+    }while(p);
+}
+
+Exercício 10-----------------------------
+
+#include <stdio.h>
+#include <string.h>
+
+struct livro{
+    char nome[31];
+    char autor[16];
+    int ano;
+};
+
+int main(){
+    struct livro livro[5];
+    char busca[30];
+    int i;
+
+    printf("Digite os dados dos livros: \n");
+    for(i=0;i<5;i++){
+        setbuf(stdin,NULL);
+        printf("Nome: ");
+        gets(livro[i].nome);
+        setbuf(stdin, NULL);
+        printf("Autor: ");
+        gets(livro[i].autor);
+        printf("Ano: ");
+        scanf("%d",&livro[i].ano);
+    }
+
+    printf("Agora digite o nome do livro que deseja buscar: ");
+    setbuf(stdin,NULL);
+    gets(busca);
+
+    for(i=0;i<5;i++){
+        if(strcmp(busca,livro[i].nome)==0){
+            printf("achamos o seu livro");
+        }
+    }
+    return 0;
+}
