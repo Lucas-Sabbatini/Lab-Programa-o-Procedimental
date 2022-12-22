@@ -167,3 +167,165 @@ int main(){
     printf("R3: \n a = %f\n b = %f\n c = %f",r3.a,r3.b,r3.c);
     return 0;
 }
+
+Exercício 6--------------------------------
+
+#include <stdio.h>
+
+
+struct funcionario {
+    char nome[20];
+    char sexo;
+    int idade;
+    int cpf;
+    char data[11];
+    char codigoSetor[5];
+    char cargo[30];
+    int salario;
+};
+
+int main(){
+    struct funcionario f1;
+    printf("Digite o seu nome: ");
+    setbuf(stdin, NULL);
+    gets(f1.nome);
+    printf("Agora digite o seu sexo (m/h): ");
+    scanf("%c",&f1.sexo);
+    printf("Digite a sua idade: ");
+    scanf("%d",&f1.idade);
+    printf("Digite o seu cpf: ");
+    scanf("%d",&f1.cpf);
+    printf("Digite a sua data de nascimento (dd/mm/aaaa): ");
+    setbuf(stdin, NULL);
+    gets(f1.data);
+    printf("Digite o codigo do setor onde trabalha: ");
+    setbuf(stdin, NULL);
+    gets(f1.codigoSetor);
+    printf("Digite o seu cargo: ");
+    setbuf(stdin, NULL);
+    gets(f1.cargo);
+    printf("Digite o seu salario:  ");
+    scanf("%d",&f1.salario);
+
+
+
+    printf(" Nome: %s\n Sexo: %c\n Idade: %d\n CPF: %d\n Nascimento: %s\n Setor: %s\n Cargo: %s\n Salario: %d",f1.nome,f1.sexo,f1.idade,f1.cpf,f1.data,f1.codigoSetor,f1.cargo,f1.salario);
+    return 0;
+}
+
+Exercício 7---------------------------------
+
+#include <stdio.h>
+
+struct pessoa{
+    char nome[20];
+    char endereco[50];
+    int telefone;
+};
+
+int main(){
+    struct pessoa p[5];
+    int j,i,menor,amenor,menori,maior,maiori;
+
+    for(i=0;i<5;i++){
+        printf("Digite o nome da pessoa: ");
+        setbuf(stdin,NULL);
+        gets(p[i].nome);
+        setbuf(stdin,NULL);
+        printf("\nAgora digite o endereco: ");
+        gets(p[i].endereco);
+        printf("\nPor fim, digite o telefone: ");
+        scanf("%d",&p[i].telefone);
+    }
+
+
+    amenor = 0;
+    maior = p[0].nome[0];
+    for(i=0;i<5;i++){
+            if(maior<p[i].nome[0]){
+                maior = p[i].nome[0];
+                maiori = i;
+            }
+
+    }
+    menor = maior;
+    for (j=0;j<4;j++){
+        for(i=0;i<5;i++){
+            if(menor>p[i].nome[0]&&amenor<p[i].nome[0]){
+                menor = p[i].nome[0];
+                menori = i;
+            }
+        }
+        amenor = menor;
+        menor = maior;
+    
+        printf("%c",menor);
+        printf("Nome: %s\n Endereco: %s\n Telefone: %d\n\n",p[menori].nome,p[menori].endereco,p[menori].telefone);
+    }
+    printf("Nome: %s\n Endereco: %s\n Telefone: %d\n\n",p[maiori].nome,p[maiori].endereco,p[maiori].telefone);
+}
+
+Exercício 8-----------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+struct carta{
+    char valor;
+    char naipe;
+};
+
+struct jogador{
+    char nome[20];
+    int vitorias;
+    int pontos;
+    struct carta cartas[3];
+};
+int main(){
+    srand(time(NULL));
+    struct carta baralho[52];
+    struct jogador p1,p2;
+    char naipes[4] = {'O','C','E','P'};
+    char valores[13] ={'A','2','3','4','5','6','7','8','9','0','V','D','R'};
+    int kas[6];
+    int i,j,k,aprove;
+
+    for(i=0,k=0;i<4;i++){
+        for(j=0;j<13;j++,k++){
+            baralho[k].naipe = naipes[i];
+            baralho[k].valor = valores[j]; 
+        }
+    }
+
+    for(i=0;i<6;i++){
+        do{
+        aprove = 0;
+        k = rand() % 51;
+        for(j=0;j<6;j++){
+            if(kas[j]==k){
+                aprove = 1;
+            }
+        }
+        }while(aprove);
+        kas[i] = k;
+        if(i<3){
+            p1.cartas[i].naipe = baralho[k].naipe;
+            p1.cartas[i].valor = baralho[k].valor;
+        }
+        else{
+            p2.cartas[i-3].naipe = baralho[k].naipe;
+            p2.cartas[i-3].valor = baralho[k].valor;
+        }
+    }
+
+    printf("Cartas do p1: ");
+    for(i=0;i<3;i++){
+        printf("\nNaipe: %c Valor: %c",p1.cartas[i].naipe,p1.cartas[i].valor);
+    }
+     printf("\n\n\nCartas do p2: ");
+    for(i=0;i<3;i++){
+        printf("\nNaipe: %c Valor: %c",p2.cartas[i].naipe,p2.cartas[i].valor);
+    }
+}
