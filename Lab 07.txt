@@ -263,6 +263,7 @@ int main(){
         printf("Nome: %s\n Endereco: %s\n Telefone: %d\n\n",p[menori].nome,p[menori].endereco,p[menori].telefone);
     }
     printf("Nome: %s\n Endereco: %s\n Telefone: %d\n\n",p[maiori].nome,p[maiori].endereco,p[maiori].telefone);
+    return 0;
 }
 
 Exercício 8-----------------------------------
@@ -328,6 +329,7 @@ int main(){
     for(i=0;i<3;i++){
         printf("\nNaipe: %c Valor: %c",p2.cartas[i].naipe,p2.cartas[i].valor);
     }
+    return 0;
 }
 
 Exercício 9-----------------------------------------
@@ -363,6 +365,7 @@ int main(){
             }
         }
     }while(p);
+    return 0;
 }
 
 Exercício 10-----------------------------
@@ -400,6 +403,48 @@ int main(){
     for(i=0;i<5;i++){
         if(strcmp(busca,livro[i].nome)==0){
             printf("achamos o seu livro");
+        }
+    }
+    return 0;
+}
+
+Exercício 11------------------------------------------------------
+
+#include <stdio.h>
+
+struct data{
+    int dia;
+    int mes;
+    int ano;
+};
+
+struct compromisso{
+    char compromisso[60];
+    struct data data;
+};
+
+
+int main(){
+    struct compromisso comp[5];
+    int i,m,a;
+
+    printf("Digite os dados de cada compromisso: ");
+    for(i=0;i<5;i++){
+        printf("Nome do compromisso: ");
+        setbuf(stdin,NULL);
+        gets(comp[i].compromisso);
+        printf("Data (dd mm aa): ");
+        setbuf(stdin,NULL);
+        scanf("%d %d %d",&comp[i].data.dia,&comp[i].data.mes,&comp[i].data.ano);
+    }
+
+    printf("Agora digite os valores de M e A: ");
+    scanf("%d %d",&m,&a);
+
+
+    for(i=0;i<5;i++){
+        if(m==comp[i].data.mes&&a==comp[i].data.ano){
+            printf("Voce deve: %s|| no dia %d/%d/%d\n",comp[i].compromisso,comp[i].data.dia,comp[i].data.mes,comp[i].data.ano);
         }
     }
     return 0;
