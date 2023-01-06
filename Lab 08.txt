@@ -1,0 +1,53 @@
+Exercício 1-------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int a,*x;
+    char b,*y;
+    
+    x = &a;
+    y = &b;
+
+    printf("Digite os numeros: ");
+    scanf("%d %c",x,y);
+
+    printf("%d %c",a,b);
+    return 0;
+}
+
+
+Exercício 2------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int a,b;
+
+
+    if(&a>&b){
+        printf("A variável a tem o endereço maior que a variável b: %d",&a);
+    }
+    else{
+        printf("A variável b tem o endereço maior que a variável a: %d",&b);
+    }
+    return 0;
+}
+
+Exercício 3-----------------------------
+
+#include <stdio.h>
+
+int main(){
+    int a,b;
+    printf("Digite o valor das suas variáveis");
+    scanf("%d %d",&a,&b);
+
+    if(&a>&b){
+        printf("A variável a tem o endereço maior que a variável b: %d",&a);
+    }
+    else{
+        printf("A variável b tem o endereço maior que a variável a: %d",&b);
+    }
+    return 0;
+}
