@@ -72,3 +72,31 @@ void troca(int *a,int *b){
     *a = *b;
     *b = temp;
 }
+
+Exercício 5--------------------------------
+
+#include <stdio.h>
+
+void maior(int *a,int *b);
+
+int main(){
+    int a,b;
+    printf("Digite os valores de a e b: ");
+    scanf("%d %d",&a,&b);
+    maior(&a,&b);
+    printf("O valor de a eh: %d e o valor de b eh: %d",a,b);
+    return 0;
+}
+
+
+void maior(int *a,int *b){
+    if(*a<*b){
+        int troca;
+        troca = *a;
+        *a = *b;
+        *b = troca;
+    }
+}
+
+Exercício 6------------------------------------
+
