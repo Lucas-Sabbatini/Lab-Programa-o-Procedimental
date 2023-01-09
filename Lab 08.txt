@@ -148,3 +148,25 @@ int main(){
         printf("%d - %d\n",i+1,&array[i]);
     }
 }
+
+Exercício 9---------------------------------------
+
+#include <stdio.h>
+
+int main(){
+    float matriz[3][3];
+    
+    for(int i = 0;i<3;i++){
+        for(int j = 0;j<3;j++){
+            printf("%d,%d - %d\n",i,j,(matriz + i + j));
+        }
+    }
+    return 0;
+    // eh possível fazer for(i=0;i<9;i++){
+        //printf("%d",matriz+i);
+        //porém o output não ficaria tão bonitinho quanto o desse método ;)
+    //}
+}
+
+Exercício 10----------------------------------------
+
