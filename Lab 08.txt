@@ -121,3 +121,18 @@ int soma(int *a,int *b){
 
 Exercício 7---------------------------------------
 
+#include <stdio.h>
+
+void soma(int *a, int b);
+
+int main(){
+    int a,b;
+    printf("Digite os valores de a e b respectivamente: ");
+    scanf("%d %d",&a,&b);
+    soma(&a,b);
+    printf("O valor modificado de a eh %d, e o valor de b eh %d",a,b);
+}
+
+void soma(int *a,int b){
+    *a = *a + b;
+}
