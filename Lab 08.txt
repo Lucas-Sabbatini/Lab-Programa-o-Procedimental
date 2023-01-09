@@ -181,3 +181,24 @@ int main(){
     }
     return 0;
 }
+
+Exercício 11-------------------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int arr[5],i;
+    for(i=0;i<5;i++){
+        printf("Digite a posição do %d° elemento",i+1);
+        scanf("%d",arr+i);
+    }
+
+    for(i=0;i<5;i++){
+        if((arr[i]%2)==0){
+            printf("Endereço de memória do %d° elemento: %d\n",i+1,arr+i);
+        }
+    }
+    return 0;
+}
+
+Exerc
