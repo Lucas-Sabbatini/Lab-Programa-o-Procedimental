@@ -201,4 +201,77 @@ int main(){
     return 0;
 }
 
-Exerc
+Exercício 12--------------------------------------------
+
+#include <stdio.h>
+
+int ordenado(int *a,int *b,int *c);
+
+int main(){
+    int a,b,c,x;
+    printf("Digite valores para as variáveis a,b e c respectivamente: ");
+    scanf("%d %d %d",&a,&b,&c);
+    x = ordenado(&a,&b,&c);
+    if (x){
+        printf("O valor das 3 variáveis eh igual, sendo ele %d",a);
+    }
+    else{
+        printf("O valor das 3 variáveis eh diferente a-%d b-%d c-%d",a,b,c);
+    }
+}
+
+int ordenado(int *a,int *b,int *c){
+    int maior,meio,menor;
+    if(*a>*b){
+        if(*c>*a){
+            // c maior a segundo maior b menor
+            maior = *c;
+            meio = *a;
+            menor = *b;
+            
+        }
+        else if(*c>*b){
+            //a maior c segundo maior e b menor
+            maior = *a;
+            meio = *c;
+            menor = *b;
+        }
+        else{
+            //a maior b segundo maior e c menor
+            maior = *a;
+            meio = *b;
+            menor = *c;
+        }
+        *a = menor;
+        *b= meio;
+        *c= maior;
+        return 0;
+    }
+    else if(*b>*a){
+        if(*c>*b){
+            // c maior b segundo maior a menor
+            maior = *c;
+            meio = *b;
+            menor = *a;
+        }
+        else if(*c>*a){
+            //b maior c segundo maior e a menor
+            maior = *b;
+            meio = *c;
+            menor = *a;
+        }
+        else{
+            //b maior a segundo maior e c menor
+            maior = *b;
+            meio = *a;
+            menor = *c;
+        }
+        *a = menor;
+        *b= meio;
+        *c= maior;
+        return 0;
+    }
+    else{
+        return 1;
+    }
+}
