@@ -100,3 +100,24 @@ void maior(int *a,int *b){
 
 Exercício 6------------------------------------
 
+#include <stdio.h>
+
+int soma(int *a,int *b);
+
+int main(){
+    int a,b,c;
+    printf("Digite os dois valores de a e b respectivamente: ");
+    scanf("%d %d",&a,&b);
+    c = soma(&a,&b);
+    printf("O dobro de a eh %d, o dobro de b eh %d, e a soma dos dobros eh %d",a,b,c);
+    return 0;
+}
+
+int soma(int *a,int *b){
+    *a *=2;
+    *b *=2;
+    return *a + *b;
+}
+
+Exercício 7---------------------------------------
+
