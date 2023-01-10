@@ -375,3 +375,41 @@ void imprime(int *arr){
 
 Exercício 16----------------------------------
 
+#include <stdio.h>
+
+int main(){
+    int a,*b,**c,***d;
+    b=&a;
+    c=&b;
+    d=&c;
+    printf("Digite o valor de a: ");
+    scanf("%d",b);
+    printf("A variável a: %d, o dobro de a %d o triplo de a %d e o quadruplo de a %d",a,2*(*b),3*(**c),4*(***d));
+    return 0;
+}
+
+Exercício 17--------------------------------
+
+#include <stdio.h>
+
+void partir(float num, int *inteiro, float *frac);
+
+int main(){
+    float num,frac;
+    int inteiro=0;
+
+    printf("Digite um numero racional: ");
+    scanf("%f",&num);
+
+    partir(num,&inteiro,&frac);
+
+    printf("\n\n---%d --- %f",inteiro,frac);
+}
+
+void partir(float num, int *inteiro, float *frac){
+    while(num>=1){
+        num--;
+        *inteiro +=1;
+    }
+    *frac = num;
+}
