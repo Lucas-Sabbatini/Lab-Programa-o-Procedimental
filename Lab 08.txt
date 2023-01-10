@@ -331,3 +331,29 @@ void check(char *str1,char *str2,int len1,int len2){
         printf("A segunda string não foi encontrada dentro da primeira");
     }
 }
+
+Exercício 14---------------------------------
+
+#include <stdio.h>
+
+void replace(char *vet,char a);
+
+int main(){
+    char vet[10];
+    char a;
+    printf("Digire o valor da variável a: ");
+    scanf("%c",&a);
+    replace(vet,a);
+    printf("O vetor reformado ficou: %s",vet);
+    return 0;
+}
+
+void replace(char *vet,char a){
+    for(int i=0;i<10;i++){
+        *(vet+i) = a;
+    }
+}
+
+
+Exercício 15----------------------------------
+
