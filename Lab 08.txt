@@ -413,3 +413,29 @@ void partir(float num, int *inteiro, float *frac){
     }
     *frac = num;
 }
+
+Exercício 18-----------------------------------
+
+#include <stdio.h>
+#define PI 3.1415
+
+void calc_esfera(float R, float *area, float *volume);
+
+int main(){
+    float raio,area,volume;
+
+    printf("Digite o valor do raio da esfera: ");
+    scanf("%f",&raio);
+    calc_esfera(raio,&area,&volume);
+
+    printf("Raio: %f| Area: %f| Volume: %f",raio,area,volume);
+    return 0;
+}
+
+void calc_esfera(float R, float *area, float *volume){
+    *area = 4 * PI * R * R;
+    *volume = *area * R/3.0;
+}
+
+Exercício 19-------------------------------------
+
