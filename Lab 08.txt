@@ -478,3 +478,18 @@ void busca(int *array,int len){
     printf("O maior elemento eh %d aparecendo %d vezes",maior,cont);
 }
 
+Exercício 20---------------------------------------------------
+
+#include <stdio.h>
+
+int main(){
+    int array[5] = {1,2,3,4,5};
+    int *pointer = array;
+
+    printf("Imprimindo o array usando aritimética de ponteiros e um outro ponteiro associado ao array\n");
+
+    for(int i=0;i<5;i++){
+        printf("%d, ",*(pointer+i));
+    }
+    return 0;
+}
