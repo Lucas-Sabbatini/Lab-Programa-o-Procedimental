@@ -602,4 +602,50 @@ int soma(int *arr1,int *arr2,int n1,int n2,int *arr3){
     }
 }
 
-Exerc
+Exercício 23------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int maior(int *arr,int n);
+
+int main(){
+    int *arr,n,k,maiorv,i,j=0;
+    printf("Digite o valor de k e o comprimento do array respectivamente: ");
+    scanf("%d %d",&k,&n);
+    arr = (int *) malloc(n*sizeof(int));
+    printf("Digite os elementos do array:\n");
+    for(i=0;i<n;i++){
+        printf("%d- ",i+1);
+        scanf("%d",arr+i);
+    }
+    maiorv = maior(arr,n);
+    printf("Maior valor: %d\n",maiorv);
+
+    while(j<n){
+        i=0;
+        while(i<k){
+            if(j<n){
+                printf("%d, ",arr[j]);
+                i++;
+                j++;
+
+            }
+            else{
+                break;
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+int maior(int *arr,int n){
+    int maior= arr[0];
+    for(int i=0;i<n;i++){
+        if(arr[i]>maior){
+            maior = arr[i];
+        }
+    }
+    return maior;
+}
