@@ -526,3 +526,80 @@ int main(){
     }
     return 0;
 }
+
+
+Exercício 22-----------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int soma(int *arr1,int *arr2,int n1,int n2,int *arr3);
+
+int main(){
+    int *arr1,*arr2,*arr3,n1=1,n2=1;
+    int i,stop=1;
+    char ent;
+
+    arr1 = (int *) malloc(sizeof(int));
+    printf("Vamos popular o primeiro array!!!\n1- ");
+    scanf("%d",arr1);
+    for(i=1;stop;i++){
+        printf("deseja adicionar um elemento ao array? (s/n)");
+        scanf(" %c",&ent);
+        if(ent=='s'){
+            n1++;
+            arr1 = (int *) realloc(arr1,n1*sizeof(int));
+            printf("%d- ",i+1);
+            scanf("%d",arr1+i);
+        }
+        else{
+            stop=0;
+        }
+    }
+    stop = 1;
+
+    arr2 = (int *) malloc(sizeof(int));
+    printf("Vamos popular o segundo array!!!\n1- ");
+    scanf("%d",arr2);
+    for(i=1;stop;i++){
+        printf("deseja adicionar um elemento ao array? (s/n)");
+        scanf(" %c",&ent);
+        if(ent=='s'){
+            n2++;
+            arr2 = (int *) realloc(arr2,n2*sizeof(int));
+            printf("%d- ",i+1);
+            scanf("%d",arr2+i);
+        }
+        else{
+            stop=0;
+        }
+    }
+    
+    if(soma(arr1,arr2,n1,n2,arr3)){
+        printf("Soma feita com sucesso\n");
+        for(i=0;i<n1;i++){
+            printf("%d, ",*(arr3+i));
+        }
+    }
+    else{
+        printf("os vetores tem tamanhos diferentes");
+    }
+    
+    return 0;
+}
+
+
+int soma(int *arr1,int *arr2,int n1,int n2,int *arr3){
+    if(n1==n2){
+        arr3 = (int *) malloc(n1*sizeof(int));
+        for(int i=0;i<n1;i++){
+            *(arr3+i) = *(arr1+i) + *(arr2+i);
+        }
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+Exerc
