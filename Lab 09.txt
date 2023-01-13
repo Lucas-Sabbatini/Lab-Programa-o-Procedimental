@@ -18,3 +18,26 @@ int main(){
         printf("%d, ",*(arr+i));
     }
 }
+
+
+Exercício 2------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int *arr,n,i;
+    printf("Digite o valor do comprimento do vetor: ");
+    scanf("%d",&n);
+
+    arr = (int *) malloc(n*sizeof(int));
+
+    for(i=0;i<n;i++){
+        printf("%d- ",i+1);
+        scanf("%d",arr+i);
+    }
+
+    for(i=0;i<n;i++){
+        printf("%d, ",arr[i]);
+    }
+}
