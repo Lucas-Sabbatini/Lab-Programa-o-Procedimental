@@ -68,7 +68,12 @@ int main(){
     }
     free(str);
     return 0;
-}#include <stdio.h>
+}
+
+
+Exerc
+
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
